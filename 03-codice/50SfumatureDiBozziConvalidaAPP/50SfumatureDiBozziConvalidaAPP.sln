@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "50SfumatureDiBozziConvalidaAPP", "50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP.csproj", "{B9072AA8-698D-494E-A32B-0F1527D2CEDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9072AA8-698D-494E-A32B-0F1527D2CEDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9072AA8-698D-494E-A32B-0F1527D2CEDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9072AA8-698D-494E-A32B-0F1527D2CEDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9072AA8-698D-494E-A32B-0F1527D2CEDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C1FA59A6-CB0B-4ABE-8BED-BBCFC1BF4274}
+	EndGlobalSection
+EndGlobal

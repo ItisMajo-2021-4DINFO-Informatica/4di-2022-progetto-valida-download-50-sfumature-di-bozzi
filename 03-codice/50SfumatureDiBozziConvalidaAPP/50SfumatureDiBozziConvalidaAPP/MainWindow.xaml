@@ -1,0 +1,18 @@
+﻿<Window x:Class="_50SfumatureDiBozziConvalidaAPP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_50SfumatureDiBozziConvalidaAPP"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Button x:Name="btnCercaFile" Content="Importa il file" Margin="10" Click="btnCercaFile_Click"/>
+        <StackPanel Orientation="Horizontal" Height="45">
+            <Label x:Name="lblTesto" Content="File Inserito: " Margin="5"/>
+            <Label x:Name="lblNomeFile" Margin="5" Width="682" Height="28"/>
+        </StackPanel>
+        <Separator/>
+        
+    </StackPanel>
+</Window>
