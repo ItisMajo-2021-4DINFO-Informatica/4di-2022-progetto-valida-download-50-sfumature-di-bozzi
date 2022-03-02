@@ -28,13 +28,13 @@ namespace _50SfumatureDiBozziConvalidaAPP
         }
 
         private void btnCercaFile_Click(object sender, RoutedEventArgs e)
-        {
-            string nomefile = "";
+        { 
+            string nomeFile = "";
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
-                nomefile = openFileDialog.FileName;
-                lblNomeFile.Content = nomefile;
+                nomeFile = openFileDialog.FileName;
+                lblNomeFile.Content = nomeFile;
                 MessageBox.Show("File inserito con successo!");
                
             }
