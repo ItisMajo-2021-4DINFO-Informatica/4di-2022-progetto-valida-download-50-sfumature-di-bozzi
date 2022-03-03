@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
+using System.Security.Cryptography;
 
 namespace _50SfumatureDiBozziConvalidaAPP
 {
@@ -22,26 +23,43 @@ namespace _50SfumatureDiBozziConvalidaAPP
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
-
-        private void btnCercaFile_Click(object sender, RoutedEventArgs e)
-        { 
-            string nomeFile = "";
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            if (openFileDialog.ShowDialog() == true)
+            string nomeFile;
+            public MainWindow()
             {
-                nomeFile = openFileDialog.FileName;
-                lblNomeFile.Content = nomeFile;
-                MessageBox.Show("File inserito con successo!");
-               
+                InitializeComponent();
             }
-            else
+
+            private void btnCercaFile_Click(object sender, RoutedEventArgs e)
             {
-                MessageBox.Show("Riprova, nessun file è stato inserito");
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    nomeFile = openFileDialog.FileName;
+                    lblNomeFile.Content = nomeFile;
+                    MessageBox.Show("File inserito con successo!");
+
+                }
+                else
+                {
+                    MessageBox.Show("Riprova, nessun file è stato inserito");
+                }
+            }
+
+            public string SHA256CheckSum(string nomeFile)
+            {
+                using (SHA256 sHA256 = SHA256.Create())
+                {
+                    using (FileStream lettore = File.OpenRead(nomeFile))
+                    {
+                        return BitConverter.ToString(sHA256.ComputeHash(lettore));
+                    }
+                }
+            }
+
+            private void btnCalcolaCheckSum_Click(object sender, RoutedEventArgs e)
+            {
+                string stringaSHA256 = SHA256CheckSum(nomeFile);
+                lblTesto3.Content = stringaSHA256.Replace("-", "");
             }
         }
     }
-}
