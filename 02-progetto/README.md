@@ -1,18 +1,55 @@
-# Progetto
+# Documento di Progetto -- 50_Sfumature_di_Bozzi
 
-Il progetto dell'elaborato dovrà affrontare i seguenti punti:
-- stesura del progetto iniziale, racconto di come si andrà a realizzare la soluzione
+Stesura e organizzazione del lavoro, racconto della realizzazione della soluzione.  <br/>
 
-Il progetto ha come inizio nella creazione del file WPF.core su Visual Studio 2019. Come prima funzione, abbiamo implementato il codice per permettere all'utente di scegliere quale file dovrà essere convalidato. Per realizzare ciò, abbiamo usufruito della classe Openfiledialog inserita in Bottone funzionale e intuitivo. Per un miglior funzionamento del programma, è stata aggiunta una condizione, per cui all'utente viene data la conferma che un file è stato preso in considerazione, utilizzando un IF (per la conferma) e un ELSE (per un eventuale avviso).
+## Inziamo
 
-Passiamo al metodo per acquisire la stringa che rappresenta il checksum SHA256 del file inserito dall'utente. Questa volta abbiamo utilizzato l'estensione "using System.Security.Cryptography;", che con l'ausilio del replace abbiamo perfezionato il codice per renderlo ultimato. Per leggere il codice appena calcolato abbiamo covertito i bit in un'unica stringa, utilizzando il BitConverter.Tostring().
+Il progetto dell'elaborato affronterà i seguenti punti:
+
+### Stesura e Racconto Soluzione 
+
+Il progetto ha come inizio nella creazione del file WPF.core su Visual Studio 2019. Dopo aver creato il file si passa all'ideazione dell'interfaccia, che dovrà essere facile da intuire e da usare. Per l'interfaccia verranno aggiunti più bottoni e diverse label, un paio di separatori per rendere tutto più organizzato. Creata l'interfaccia si passa al codice, come prima funzione verrà implementato il codice per permettere all'utente di scegliere quale file dovrà essere convalidato. Per un miglior funzionamento del programma, verrà aggiunta una condizione, per cui all'utente verrà data la conferma che un file è stato preso in considerazione, utilizzando un IF (per la conferma) e un ELSE (per un eventuale avviso). Per la convalida del file verrà aggiunto un metodo di decriptazione, tramite chiave pubblica PGP, della stringa di checksum SHA256. Qualora la stringa fosse diversa da quella dell'autore, verrà aggiunto un sistema di notifica che permetterà all'utente di visionare il problema. 
+
+### Organizzazione
+
+Fasi di Progetto:
+
+* Fase 1. Definizione, chiarimento idee.
+* Fase 2. Progetto, stesura e racconto soluzione.
+* Fase 3. Codice, risoluzione pratica elaborato.
+<br/>
+
+Ruoli dei Membri:
+
+* Decisi = scrittura codice.
+* Franco = ricerca fonti.
+* De Filippis = stesura lessico e struttura.
+
+<br/>
+Stima Lavoro:
+<br/><br/>
+La stima per la realizzazione del progetto, nelle sue 3 fasi, è di circa 30 giorni. 
+ 
+### Appunti e Commenti
 
 
 
+### Relazioni e Collegamenti
 
 
-- organizzazione del lavoro, suddivisione della realizzazione in fasi, stima della durata e ruoli dei membri del gruppo
-- ducumantazione del processo di realizzazione, attraverso appunti e commenti significativi alle versioni rilasciate su GitHub (commit)
-- documentazione dei collegamenti e relazioni tra ciò che si sta realizzando e le informazioni di riferimento (teoria della materia, altre materie, soluzioni già esistenti)
 
-Puoi editare questo file per creare il tuo documento di progetto oppure aggiungere un altro file in questa cartella. In ogni caso il documento deve essere un file di testo formattato con il linguaggio Markdown.
+## Autori
+
+* Decisi Matteo
+* Franco Andrea
+* Marco De Filippis
+
+## Licenza
+
+Il Documento é sotto la licenza di 50SfumaturediBozzi.
+
+## Info
+
+Ispirazione:
+* [fonte](https://gist.github.com/DomPizzie/7a5ff55ffa9081f2de27c315f5018afc)
+
