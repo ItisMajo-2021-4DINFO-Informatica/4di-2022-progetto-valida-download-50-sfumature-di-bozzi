@@ -1,3 +1,2 @@
-# Questo è un titolone
-
-Con il suo paragrafo
+# Documento di definizione
+Consulta il [Documento di definizione](/01-definizione)
