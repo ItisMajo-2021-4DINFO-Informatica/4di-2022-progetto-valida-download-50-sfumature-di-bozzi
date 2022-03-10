@@ -21,9 +21,9 @@ Fasi di Progetto:
 
 Ruoli dei Membri:
 
-* Decisi = scrittura codice.
-* Franco = ricerca fonti.
-* De Filippis = stesura lessico e struttura.
+* Decisi = scrittura codice e revisione documenti.
+* Franco = ricerca fonti e implementazione di esse.
+* De Filippis = lessico e struttura + scrittura codice.
 
 <br/>
 Stima Lavoro:
@@ -32,11 +32,13 @@ La stima per la realizzazione del progetto, nelle sue 3 fasi, è di circa 30 gio
  
 ### Appunti e Commenti
 
-
+CheckSum SHA256 --> sequenza di bit associata al pachetto;
+Chiave pubblica PGP --> chiave per la trasmissione di messaggi crittografati;
 
 ### Relazioni e Collegamenti
 
-
+Sistemi e reti: sequenza di bit leggibili su sistema operativo;
+Telecomunicazioni: bit che rappresentano un messaggio;
 
 ## Autori
 
