@@ -24,6 +24,7 @@ namespace _50SfumatureDiBozziConvalidaAPP
     public partial class MainWindow : Window
     {
             string nomeFile;
+        string stringafinale;
             public MainWindow()
             {
                 InitializeComponent();
@@ -59,7 +60,13 @@ namespace _50SfumatureDiBozziConvalidaAPP
             private void btnCalcolaCheckSum_Click(object sender, RoutedEventArgs e)
             {
                 string stringaSHA256 = SHA256CheckSum(nomeFile);
-                lblTesto3.Content = stringaSHA256.Replace("-", "");
+                string stringafinale = stringaSHA256.Replace("-", "");
+            string stringainiziale = "f83be101c5e9c23740d6fde55fd8fefebf4fafb7badcb3756d1f574b5ad37507";
+            lblTesto3.Content = stringafinale;
+            if (stringafinale == stringainiziale)
+            {
+                lblTesto4.Content = "Stringa Checksum SHA256 CONVALIDATA!";
             }
         }
     }
+}
