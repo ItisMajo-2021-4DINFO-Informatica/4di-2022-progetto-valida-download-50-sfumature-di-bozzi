@@ -32,8 +32,8 @@ La stima per la realizzazione del progetto, nelle sue 3 fasi, è di circa 30 gio
  
 ### Appunti e Commenti
 
-CheckSum SHA256 --> sequenza di bit associata al pachetto;
-Chiave pubblica PGP --> chiave per la trasmissione di messaggi crittografati;
+CheckSum SHA256 --> sequenza di bit associata al pachetto; <br/>
+Chiave pubblica PGP --> chiave per la trasmissione di messaggi crittografati; <br/>
 
 ### Relazioni e Collegamenti
 
