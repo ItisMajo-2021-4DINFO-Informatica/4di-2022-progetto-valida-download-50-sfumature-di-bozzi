@@ -37,8 +37,8 @@ Chiave pubblica PGP --> chiave per la trasmissione di messaggi crittografati; <b
 
 ### Relazioni e Collegamenti
 
-Sistemi e reti: sequenza di bit leggibili su sistema operativo;
-Telecomunicazioni: bit che rappresentano un messaggio;
+Sistemi e reti: sequenza di bit leggibili su sistema operativo; <br/>
+Telecomunicazioni: bit che rappresentano un messaggio; <br/>
 
 ## Autori
 
