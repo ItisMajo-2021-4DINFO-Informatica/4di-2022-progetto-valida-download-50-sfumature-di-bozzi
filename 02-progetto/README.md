@@ -39,7 +39,12 @@ Chiave pubblica PGP --> chiave per la trasmissione di messaggi crittografati; <b
 
 Sistemi e reti: sequenza di bit leggibili su sistema operativo; <br/>
 Telecomunicazioni: bit che rappresentano un messaggio; <br/>
+
+![](tele.png)
+
 TPSIT: calcolo del checksum SHA256; <br/>
+
+![](1.png)
 
 ## Autori
 
