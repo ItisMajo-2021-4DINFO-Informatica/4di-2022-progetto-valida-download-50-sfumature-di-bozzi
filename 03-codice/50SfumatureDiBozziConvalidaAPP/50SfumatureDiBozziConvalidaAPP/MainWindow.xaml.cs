@@ -23,49 +23,70 @@ namespace _50SfumatureDiBozziConvalidaAPP
     /// </summary>
     public partial class MainWindow : Window
     {
-            string nomeFile;
-        string stringafinale;
-            public MainWindow()
+        string nomeFile;
+        string stringainiziale = "";
+        string stringafinale = "";
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
+
+        private void btnCercaFile_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
             {
-                InitializeComponent();
+                nomeFile = openFileDialog.FileName;
+                lblNomeFile.Content = nomeFile;
+                MessageBox.Show("File inserito con successo!");
+
             }
-
-            private void btnCercaFile_Click(object sender, RoutedEventArgs e)
+            else
             {
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                if (openFileDialog.ShowDialog() == true)
-                {
-                    nomeFile = openFileDialog.FileName;
-                    lblNomeFile.Content = nomeFile;
-                    MessageBox.Show("File inserito con successo!");
+                MessageBox.Show("Riprova, nessun file è stato inserito");
+            }
+        }
 
-                }
-                else
+        public string SHA256CheckSum(string nomeFile)
+        {
+            using (SHA256 sHA256 = SHA256.Create())
+            {
+                using (FileStream lettore = File.OpenRead(nomeFile))
                 {
-                    MessageBox.Show("Riprova, nessun file è stato inserito");
+                    return BitConverter.ToString(sHA256.ComputeHash(lettore));
                 }
             }
+        }
 
-            public string SHA256CheckSum(string nomeFile)
-            {
-                using (SHA256 sHA256 = SHA256.Create())
-                {
-                    using (FileStream lettore = File.OpenRead(nomeFile))
-                    {
-                        return BitConverter.ToString(sHA256.ComputeHash(lettore));
-                    }
-                }
-            }
+        public void btnCalcolaCheckSum_Click(object sender, RoutedEventArgs e)
+        {
+            string stringaSHA256 = SHA256CheckSum(nomeFile);
+            stringafinale = stringaSHA256.Replace("-", "");
 
-            private void btnCalcolaCheckSum_Click(object sender, RoutedEventArgs e)
-            {
-                string stringaSHA256 = SHA256CheckSum(nomeFile);
-                string stringafinale = stringaSHA256.Replace("-", "");
-            string stringainiziale = "F83BE101C5E9C23740D6FDE55FD8FEFEBF4FAFB7BADCB3756D1F574B5AD37507";
             lblTesto3.Content = stringafinale;
-            if (stringafinale == stringainiziale)
+        }
+
+        private void btnVerificaCheckSum_Click(object sender, RoutedEventArgs e)
+        {
+            using (FileStream flusso = new FileStream("SHA256.txt", FileMode.Open, FileAccess.Read))
             {
-                lblTesto4.Content = "Stringa Checksum SHA256 CONVALIDATA!";
+                StreamReader lettore = new StreamReader(flusso);
+
+                while (!lettore.EndOfStream)
+                {
+                    stringainiziale = lettore.ReadLine();
+                }
+            }
+            if (stringainiziale != "")
+            {
+                if (stringafinale == stringainiziale)
+                {
+                    lblTesto4.Content = "Stringa Checksum SHA256 CONVALIDATA!";
+                }
+            }
+            else
+            {
+                MessageBox.Show("Non è stato possibile leggere una checksum SHA256");
             }
         }
     }

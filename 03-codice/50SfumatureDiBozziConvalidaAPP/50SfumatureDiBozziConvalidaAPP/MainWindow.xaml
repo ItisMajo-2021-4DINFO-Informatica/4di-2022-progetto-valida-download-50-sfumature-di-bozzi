@@ -5,21 +5,30 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_50SfumatureDiBozziConvalidaAPP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="512" Width="935">
+        Title="MainWindow" Height="561" Width="1005">
     <StackPanel>
         <Button x:Name="btnCercaFile" Content="Importa il file" Margin="10" Click="btnCercaFile_Click"/>
         <StackPanel Orientation="Horizontal" Height="45">
             <Label x:Name="lblTesto" Content="File Inserito: " Margin="5"/>
             <Label x:Name="lblNomeFile" Margin="5" Width="682" Height="28"/>
         </StackPanel>
-        <Separator/>
-        <StackPanel Orientation="Horizontal" Height="45">
+        <Separator Height="34" Margin="5"/>
+        <StackPanel Orientation="Horizontal"  Height="45">
             <Button x:Name="btnCalcolaCheckSum" Content="Calcolo del checksum SHA256" Margin="10" Click="btnCalcolaCheckSum_Click"/>
-            <Label x:Name="lblTesto2" Content="Checksum SHA256 calcolato: " Margin="5"/>
-            <Label x:Name="lblTesto3" Margin="5" Width="560" FontSize="10"/>
-        
+            <Button x:Name="btnVerificaCheckSum" Content="Verifica del checksum SHA256" Margin="10" Click="btnVerificaCheckSum_Click"/>
         </StackPanel>
-        <Label x:Name="lblTesto4" Margin="5" FontSize="10" Height="72" Foreground="Green"/>
-
+        <Label x:Name="lblTesto2" Content="Checksum SHA256 calcolato: " Margin="5" Height="27"/>
+        <Label x:Name="lblTesto3" Margin="5" Height="27"/>
+        <Label x:Name="lblTesto4" Margin="5" Foreground="Green" Height="27"/>
+        <Separator Height="38" Margin="5"/>
+        <StackPanel Orientation="Horizontal"  Height="45">
+            <Button x:Name="btnLeggiPGP" Content="Lettura della chiave PGP" Margin="10" Click="btnLeggiPGP_Click"/>
+            <Button x:Name="btnVerificaPGP" Content="Verifica della chiave PGP" Margin="10" Click="btnVerificaPGP_Click"/>
+        </StackPanel>
+        <Label x:Name="lblTesto5" Content="Chiave PGP letta: " Margin="5" Height="27"/>
+        <Label x:Name="lblTesto6" Margin="5" Height="27"/>
+        <Label x:Name="lblTesto7" Margin="5" Foreground="Green" Height="27"/>
+        <Separator Height="38" Margin="5"/>
+        <Separator Height="38" Margin="5"/>
     </StackPanel>
 </Window>
