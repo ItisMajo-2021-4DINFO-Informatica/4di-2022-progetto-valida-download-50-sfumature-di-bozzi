@@ -61,7 +61,7 @@ namespace _50SfumatureDiBozziConvalidaAPP
             {
                 string stringaSHA256 = SHA256CheckSum(nomeFile);
                 string stringafinale = stringaSHA256.Replace("-", "");
-            string stringainiziale = "f83be101c5e9c23740d6fde55fd8fefebf4fafb7badcb3756d1f574b5ad37507";
+            string stringainiziale = "F83BE101C5E9C23740D6FDE55FD8FEFEBF4FAFB7BADCB3756D1F574B5AD37507";
             lblTesto3.Content = stringafinale;
             if (stringafinale == stringainiziale)
             {
