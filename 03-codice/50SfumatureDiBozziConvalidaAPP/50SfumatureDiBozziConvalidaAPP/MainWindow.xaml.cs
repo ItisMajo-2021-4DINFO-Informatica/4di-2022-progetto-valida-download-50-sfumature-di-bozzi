@@ -89,5 +89,9 @@ namespace _50SfumatureDiBozziConvalidaAPP
                 MessageBox.Show("Non è stato possibile leggere una checksum SHA256");
             }
         }
+
+        private void btnLeggiPGP_Click(object sender, RoutedEventArgs e)
+        {
+        }
     }
 }
