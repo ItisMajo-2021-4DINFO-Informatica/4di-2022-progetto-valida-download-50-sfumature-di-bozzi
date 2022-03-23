@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_50SfumatureDiBozziConvalidaAPP"
         mc:Ignorable="d"
-        Title="MainWindow" Height="561" Width="1005">
+        Title="Verifica download" Height="561" Width="1005">
     <StackPanel>
         <Button x:Name="btnCercaFile" Content="Importa il file" Margin="10" Click="btnCercaFile_Click"/>
         <StackPanel Orientation="Horizontal" Height="45">
