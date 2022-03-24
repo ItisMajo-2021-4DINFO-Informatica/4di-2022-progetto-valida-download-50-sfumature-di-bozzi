@@ -1,11 +1,11 @@
 # Lista Documenti
 <br/>
 <br/>
-DOCUMENTO DI DEFINIZIONE <br/>
+<b> DOCUMENTO DI DEFINIZIONE </b> <br/>
 Consulta il [Documento di definizione](/01-definizione/README.md)
 <br/>
-DOCUMENTO DI PROGETTO <br/>
+<b> DOCUMENTO DI PROGETTO </b> <br/>
 Consulta il [Documento di progetto](/02-progetto/README.md)
 <br/>
-TRACCIA <br/>
+<b> TRACCIA </b> <br/>
 Consulta la [Traccia](/4DI-2022-TracciaProgetto.md)
