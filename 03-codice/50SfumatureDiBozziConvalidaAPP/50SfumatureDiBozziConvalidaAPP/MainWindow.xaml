@@ -5,30 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_50SfumatureDiBozziConvalidaAPP"
         mc:Ignorable="d"
-        Title="Verifica download" Height="561" Width="1005">
+        Title="Verifica download" Height="608" Width="1074">
     <StackPanel>
-        <Button x:Name="btnCercaFile" Content="Importa il file" Margin="10" Click="btnCercaFile_Click"/>
-        <StackPanel Orientation="Horizontal" Height="45">
-            <Label x:Name="lblTesto" Content="File Inserito: " Margin="5"/>
-            <Label x:Name="lblNomeFile" Margin="5" Width="682" Height="28"/>
-        </StackPanel>
-        <Separator Height="34" Margin="5"/>
-        <StackPanel Orientation="Horizontal"  Height="45">
-            <Button x:Name="btnCalcolaCheckSum" Content="Calcolo del checksum SHA256" Margin="10" Click="btnCalcolaCheckSum_Click"/>
-            <Button x:Name="btnVerificaCheckSum" Content="Verifica del checksum SHA256" Margin="10" Click="btnVerificaCheckSum_Click"/>
-        </StackPanel>
-        <Label x:Name="lblTesto2" Content="Checksum SHA256 calcolato: " Margin="5" Height="27"/>
-        <Label x:Name="lblTesto3" Margin="5" Height="27"/>
-        <Label x:Name="lblTesto4" Margin="5" Foreground="Green" Height="27"/>
-        <Separator Height="38" Margin="5"/>
-        <StackPanel Orientation="Horizontal"  Height="45">
-            <Button x:Name="btnLeggiPGP" Content="Lettura della chiave PGP" Margin="10" Click="btnLeggiPGP_Click"/>
-            <Button x:Name="btnVerificaPGP" Content="Verifica della chiave PGP" Margin="10" Click="btnVerificaPGP_Click"/>
-        </StackPanel>
-        <Label x:Name="lblTesto5" Content="Chiave PGP letta: " Margin="5" Height="27"/>
-        <Label x:Name="lblTesto6" Margin="5" Height="27"/>
-        <Label x:Name="lblTesto7" Margin="5" Foreground="Green" Height="27"/>
-        <Separator Height="38" Margin="5"/>
-        <Separator Height="38" Margin="5"/>
+        <StackPanel.Background>
+            <ImageBrush ImageSource="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\poi.jpg"/>
+        </StackPanel.Background>
+
+        <Label x:Name="label1" Content="Convalida File" Margin="10" Foreground="White" Style="{StaticResource CustomFont}" FontSize="50" HorizontalAlignment="Center"/>
+
+        <Grid Height="418">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="235*"/>
+                <RowDefinition Height="183*"/>
+            </Grid.RowDefinitions>
+            <Image Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\ciao2.png" Margin="18,10,798,95"/>
+            <TextBlock x:Name="label2" Text="Start" Margin="116,43,896,160" FontSize="25" FontFamily="Rockwell" FontStyle="Oblique"  Foreground="Black" TextDecorations="Strikethrough"/>
+            <Button x:Name="btnCercaFile" Content="Importa il file" Margin="105,88,885,117" Click="btnCercaFile_Click" Style="{StaticResource btnBlue}"/>
+
+            <Image Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\lollo.png" Margin="638,0,-62,119" Grid.RowSpan="2"/>
+            <Image Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\poll.png" RenderTransformOrigin="0.588,3.163" Margin="39,0,133,144" Grid.RowSpan="2"/>
+        </Grid>
+
     </StackPanel>
 </Window>
