@@ -6,9 +6,6 @@ description: >-
 tags:
   - GitHub
   - GitHub Pages
-template:
-  name: github-pages-with-jekyll
-  repo: github-pages-with-jekyll-template
 preferences:
   - type: dropdown
     name: language
