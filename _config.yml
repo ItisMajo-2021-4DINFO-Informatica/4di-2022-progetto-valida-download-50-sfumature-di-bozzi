@@ -1,4 +1,21 @@
 theme: jekyll-theme-dinky
 title: 50 sfumature
-- label: English
+description: >-
+  Learn how to create a site or blog from your GitHub repositories with GitHub
+  Pages.
+tags:
+  - GitHub
+  - GitHub Pages
+template:
+  name: github-pages-with-jekyll
+  repo: github-pages-with-jekyll-template
+preferences:
+  - type: dropdown
+    name: language
+    label: Language
+    description: Choose your preferred language.
+    options:
+      - label: English
         value: en
+      - label: Español
+        value: es
