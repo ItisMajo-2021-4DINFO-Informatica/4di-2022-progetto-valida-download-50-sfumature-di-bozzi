@@ -33,11 +33,13 @@ namespace _50SfumatureDiBozziConvalidaAPP
         
         private void btnCercaFile_Click(object sender, RoutedEventArgs e)
         {
+            string accorciato;
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
                 nomeFile = openFileDialog.FileName;
-                //lblNomeFile.Content = nomeFile;
+                accorciato = nomeFile.Replace("C:\\Users\\Utente\\Desktop", "..\\");
+                lblNomeFile.Content = accorciato;
                 MessageBox.Show("File inserito con successo!");
 
             }
@@ -47,7 +49,7 @@ namespace _50SfumatureDiBozziConvalidaAPP
             }
         }
 
-        /*public string SHA256CheckSum(string nomeFile)
+        public string SHA256CheckSum(string nomeFile)
         {
             using (SHA256 sHA256 = SHA256.Create())
             {
@@ -58,7 +60,7 @@ namespace _50SfumatureDiBozziConvalidaAPP
             }
         }
 
-        public void btnCalcolaCheckSum_Click(object sender, RoutedEventArgs e)
+        /*public void btnCalcolaCheckSum_Click(object sender, RoutedEventArgs e)
         {
             string stringaSHA256 = SHA256CheckSum(nomeFile);
             stringafinale = stringaSHA256.Replace("-", "");
@@ -93,12 +95,7 @@ namespace _50SfumatureDiBozziConvalidaAPP
         private void btnLeggiPGP_Click(object sender, RoutedEventArgs e)
         {
         }
-
-        private void SetDefaultStrikethrough()
-        {
-            // Set the underline decoration directly to the text block.
-            label2.TextDecorations = TextDecorations.Strikethrough;
-        }
-        */
+*/
+        
     }
 }

@@ -18,13 +18,51 @@
                 <RowDefinition Height="235*"/>
                 <RowDefinition Height="183*"/>
             </Grid.RowDefinitions>
-            <Image Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\ciao2.png" Margin="18,10,798,95"/>
-            <TextBlock x:Name="label2" Text="Start" Margin="116,43,896,160" FontSize="25" FontFamily="Rockwell" FontStyle="Oblique"  Foreground="Black" TextDecorations="Strikethrough"/>
-            <Button x:Name="btnCercaFile" Content="Importa il file" Margin="105,88,885,117" Click="btnCercaFile_Click" Style="{StaticResource btnBlue}"/>
-
-            <Image Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\lollo.png" Margin="638,0,-62,119" Grid.RowSpan="2"/>
-            <Image Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\poll.png" RenderTransformOrigin="0.588,3.163" Margin="39,0,133,144" Grid.RowSpan="2"/>
+            <TextBlock x:Name="label2" Text="Start" Margin="127,0,816,162" FontSize="40" FontFamily="Rockwell" FontStyle="Oblique"  Foreground="White" />
+            <Button x:Name="btnCercaFile" Content="Importa il file" Margin="105,88,832,117" Click="btnCercaFile_Click" Style="{StaticResource btnBlue}"/>
+            <Rectangle
+                Stroke="White" StrokeThickness="4"
+                Margin="44,-6,762,83"/>
+            <Line
+                X1="10" Y1="60"
+                X2="150" Y2="60"
+                Stroke="White"
+                StrokeThickness="4" Margin="91,-2,-91,1"/>
+            <Line
+                X1="0" Y1="60"
+                X2="470" Y2="60"
+                Stroke="White"
+                StrokeThickness="2" Margin="300,34,134,46" Grid.Row="1" />
+            <Label x:Name="lblNomeFile" Margin="48,48,521,92" FontSize="11" Style="{StaticResource CustomFont}" Grid.Row="1" Foreground="White"/>
+            <Rectangle
+                Stroke="White" StrokeThickness="4"
+                Margin="403,-6,403,83"/>
+            <Line
+                X1="10" Y1="60"
+                X2="150" Y2="60"
+                Stroke="White"
+                StrokeThickness="4" Margin="91,-2,-91,1"/>
+            <Rectangle
+                Stroke="White" StrokeThickness="4"
+                Margin="762,-6,44,83"/>
+            <Line
+                X1="10" Y1="60"
+                X2="150" Y2="60"
+                Stroke="White"
+                StrokeThickness="4" Margin="91,-2,-91,1"/>
+            <Label Content="SHA256" Foreground="White" FontSize="40" FontStyle="Oblique" FontFamily="Rockwell" Margin="458,-6,458,168"/>
+            <Line
+                X1="10" Y1="60"
+                X2="150" Y2="60"
+                Stroke="White"
+                StrokeThickness="4" Margin="453,-6,-453,5"/>
+            <Label Content="PGP" Foreground="White" FontSize="40" FontStyle="Oblique" FontFamily="Rockwell" Margin="844,-6,114,168"/>
+            <Line
+                X1="10" Y1="60"
+                X2="150" Y2="60"
+                Stroke="White"
+                StrokeThickness="4" Margin="811,-11,-811,10"/>
         </Grid>
-
+        <StackPanel Height="215"/>
     </StackPanel>
 </Window>
