@@ -40,12 +40,11 @@ namespace _50SfumatureDiBozziConvalidaAPP
                 nomeFile = openFileDialog.FileName;
                 accorciato = nomeFile.Replace("C:\\Users\\Utente\\Desktop\\", "..\\");
                 lblTesto.Content = accorciato;
-                MessageBox.Show("File inserito con successo!");
 
             }
             else
             {
-                MessageBox.Show("Riprova, nessun file è stato inserito");
+                lblTesto.Content = "Riprova, nessun file è stato inserito";
             }
         }
 
@@ -69,7 +68,7 @@ namespace _50SfumatureDiBozziConvalidaAPP
 
             if (stringafinale != "")
             {
-                using (FileStream flusso = new FileStream("", FileMode.Open, FileAccess.Read))
+                using (FileStream flusso = new FileStream("openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256", FileMode.Open, FileAccess.Read))
                 {
                     StreamReader lettore = new StreamReader(flusso);
 
@@ -82,14 +81,15 @@ namespace _50SfumatureDiBozziConvalidaAPP
                 {
                     if (stringafinale == stringainiziale)
                     {
-
+                        lblTesto.Content = "Valore CheckSum SHA256: Convalidato!";
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Non è stato possibile leggere una checksum SHA256");
+                    lblTesto.Content = "Non è stato possibile leggere una checksum SHA256";
                 }
             }
+            
         }
 
         private void btnVerificaPGP_Click(object sender, RoutedEventArgs e)

@@ -17,17 +17,17 @@
                 <RowDefinition Height="235*"/>
                 <RowDefinition Height="183*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="label2" Text="START" Margin="105,35,838,127" FontSize="40" FontFamily="Rockwell" FontStyle="Oblique"  Foreground="White" />
+            <TextBlock x:Name="label2" Text="START" Margin="105,35,812,127" FontSize="40" FontFamily="Rockwell" FontStyle="Oblique"  Foreground="White" />
             <Button x:Name="btnCercaFile" Content="Importa File" Margin="100,122,832,83" Click="btnCercaFile_Click" Style="{StaticResource btnBlue}"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
                 Margin="40,33,767,44"/>
             <Line
                 X1="0" Y1="60"
-                X2="470" Y2="60"
+                X2="550" Y2="60"
                 Stroke="White"
-                StrokeThickness="2" Margin="300,34,134,46" Grid.Row="1" />
-            <Label x:Name="lblTesto" Margin="284,48,284,92" FontSize="18" Style="{StaticResource CustomFont}" Grid.Row="1" Foreground="White"/>
+                StrokeThickness="2" Margin="52,34,355,46" Grid.Row="1" />
+            <Label x:Name="lblTesto" Margin="18,48,433,92" FontSize="15" Style="{StaticResource CustomFont}" Grid.Row="1" Foreground="White" HorizontalContentAlignment="Center"/>
             <Button x:Name="btnCalcolaSHA" Content="CheckSum SHA256" Margin="468,122,468,83" Click="btnCalcolaSHA_Click" Style="{StaticResource btnBlue}"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
