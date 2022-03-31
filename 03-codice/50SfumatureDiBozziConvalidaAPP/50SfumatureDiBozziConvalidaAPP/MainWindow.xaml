@@ -12,56 +12,47 @@
         </StackPanel.Background>
 
         <Label x:Name="label1" Content="Convalida File" Margin="10" Foreground="White" Style="{StaticResource CustomFont}" FontSize="50" HorizontalAlignment="Center"/>
-
         <Grid Height="418">
             <Grid.RowDefinitions>
                 <RowDefinition Height="235*"/>
                 <RowDefinition Height="183*"/>
             </Grid.RowDefinitions>
-            <TextBlock x:Name="label2" Text="Start" Margin="127,0,816,162" FontSize="40" FontFamily="Rockwell" FontStyle="Oblique"  Foreground="White" />
-            <Button x:Name="btnCercaFile" Content="Importa il file" Margin="105,88,832,117" Click="btnCercaFile_Click" Style="{StaticResource btnBlue}"/>
+            <TextBlock x:Name="label2" Text="START" Margin="105,35,838,127" FontSize="40" FontFamily="Rockwell" FontStyle="Oblique"  Foreground="White" />
+            <Button x:Name="btnCercaFile" Content="Importa File" Margin="100,122,832,83" Click="btnCercaFile_Click" Style="{StaticResource btnBlue}"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
-                Margin="44,-6,762,83"/>
-            <Line
-                X1="10" Y1="60"
-                X2="150" Y2="60"
-                Stroke="White"
-                StrokeThickness="4" Margin="91,-2,-91,1"/>
+                Margin="40,33,767,44"/>
             <Line
                 X1="0" Y1="60"
                 X2="470" Y2="60"
                 Stroke="White"
                 StrokeThickness="2" Margin="300,34,134,46" Grid.Row="1" />
-            <Label x:Name="lblNomeFile" Margin="48,48,521,92" FontSize="11" Style="{StaticResource CustomFont}" Grid.Row="1" Foreground="White"/>
+            <Label x:Name="lblTesto" Margin="284,48,284,92" FontSize="18" Style="{StaticResource CustomFont}" Grid.Row="1" Foreground="White"/>
+            <Button x:Name="btnCalcolaSHA" Content="CheckSum SHA256" Margin="468,122,468,83" Click="btnCalcolaSHA_Click" Style="{StaticResource btnBlue}"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
-                Margin="403,-6,403,83"/>
+                Margin="403,33,403,44"/>
             <Line
                 X1="10" Y1="60"
                 X2="150" Y2="60"
                 Stroke="White"
-                StrokeThickness="4" Margin="91,-2,-91,1"/>
+                StrokeThickness="4" Margin="91,28,-91,154" Grid.RowSpan="2"/>
+            <Button x:Name="btnVerificaPGP" Content="Chiave PGP" Margin="830,122,104,83" Click="btnVerificaPGP_Click" Style="{StaticResource btnBlue}"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
-                Margin="762,-6,44,83"/>
+                Margin="768,33,38,44"/>
+            <Label Content="SHA256" Foreground="White" FontSize="40" FontStyle="Oblique" FontFamily="Rockwell" Margin="458,30,446,132"/>
             <Line
                 X1="10" Y1="60"
                 X2="150" Y2="60"
                 Stroke="White"
-                StrokeThickness="4" Margin="91,-2,-91,1"/>
-            <Label Content="SHA256" Foreground="White" FontSize="40" FontStyle="Oblique" FontFamily="Rockwell" Margin="458,-6,458,168"/>
+                StrokeThickness="4" Margin="458,28,-458,154" Grid.RowSpan="2"/>
+            <Label Content="PGP" Foreground="White" FontSize="40" FontStyle="Oblique" FontFamily="Rockwell" Margin="854,30,104,132"/>
             <Line
                 X1="10" Y1="60"
                 X2="150" Y2="60"
                 Stroke="White"
-                StrokeThickness="4" Margin="453,-6,-453,5"/>
-            <Label Content="PGP" Foreground="White" FontSize="40" FontStyle="Oblique" FontFamily="Rockwell" Margin="844,-6,114,168"/>
-            <Line
-                X1="10" Y1="60"
-                X2="150" Y2="60"
-                Stroke="White"
-                StrokeThickness="4" Margin="811,-11,-811,10"/>
+                StrokeThickness="4" Margin="823,28,-823,154" Grid.RowSpan="2"/>
         </Grid>
         <StackPanel Height="215"/>
     </StackPanel>

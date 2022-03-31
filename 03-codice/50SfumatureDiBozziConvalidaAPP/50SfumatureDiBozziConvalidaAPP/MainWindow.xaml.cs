@@ -38,8 +38,8 @@ namespace _50SfumatureDiBozziConvalidaAPP
             if (openFileDialog.ShowDialog() == true)
             {
                 nomeFile = openFileDialog.FileName;
-                accorciato = nomeFile.Replace("C:\\Users\\Utente\\Desktop", "..\\");
-                lblNomeFile.Content = accorciato;
+                accorciato = nomeFile.Replace("C:\\Users\\Utente\\Desktop\\", "..\\");
+                lblTesto.Content = accorciato;
                 MessageBox.Show("File inserito con successo!");
 
             }
@@ -60,42 +60,41 @@ namespace _50SfumatureDiBozziConvalidaAPP
             }
         }
 
-        /*public void btnCalcolaCheckSum_Click(object sender, RoutedEventArgs e)
+        private void btnCalcolaSHA_Click(object sender, RoutedEventArgs e)
         {
             string stringaSHA256 = SHA256CheckSum(nomeFile);
             stringafinale = stringaSHA256.Replace("-", "");
 
-            lblTesto3.Content = stringafinale;
-        }
+            lblTesto.Content = stringafinale;
 
-        private void btnVerificaCheckSum_Click(object sender, RoutedEventArgs e)
-        {
-            using (FileStream flusso = new FileStream("SHA256.txt", FileMode.Open, FileAccess.Read))
+            if (stringafinale != "")
             {
-                StreamReader lettore = new StreamReader(flusso);
-
-                while (!lettore.EndOfStream)
+                using (FileStream flusso = new FileStream("", FileMode.Open, FileAccess.Read))
                 {
-                    stringainiziale = lettore.ReadLine();
+                    StreamReader lettore = new StreamReader(flusso);
+
+                    while (!lettore.EndOfStream)
+                    {
+                        stringainiziale = lettore.ReadLine();
+                    }
+                }
+                if (stringainiziale != "")
+                {
+                    if (stringafinale == stringainiziale)
+                    {
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Non è stato possibile leggere una checksum SHA256");
                 }
             }
-            if (stringainiziale != "")
-            {
-                if (stringafinale == stringainiziale)
-                {
-                    lblTesto4.Content = "Stringa Checksum SHA256 CONVALIDATA!";
-                }
-            }
-            else
-            {
-                MessageBox.Show("Non è stato possibile leggere una checksum SHA256");
-            }
         }
 
-        private void btnLeggiPGP_Click(object sender, RoutedEventArgs e)
+        private void btnVerificaPGP_Click(object sender, RoutedEventArgs e)
         {
+
         }
-*/
-        
     }
 }
