@@ -62,10 +62,12 @@ namespace _50SfumatureDiBozziConvalidaAPP
         private void btnCalcolaSHA_Click(object sender, RoutedEventArgs e)
         {
             string stringaSHA256 = SHA256CheckSum(nomeFile);
-            stringafinale = stringaSHA256.Replace("-", "");
+            stringafinale = stringaSHA256.Replace("-", "").ToLower();
 
             lblTesto.Content = stringafinale;
 
+            foto2.Visibility = Visibility.Hidden;
+            foto1.Visibility = Visibility.Hidden;
             if (stringafinale != "")
             {
                 using (FileStream flusso = new FileStream("openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256", FileMode.Open, FileAccess.Read))
@@ -74,20 +76,21 @@ namespace _50SfumatureDiBozziConvalidaAPP
 
                     while (!lettore.EndOfStream)
                     {
-                        stringainiziale = lettore.ReadLine();
+                        stringainiziale = lettore.ReadLine().Substring(0,64);
                     }
                 }
                 if (stringainiziale != "")
                 {
                     if (stringafinale == stringainiziale)
+                    { 
+                        foto1.Visibility = Visibility.Visible;
+                    }
+                    else if (stringafinale != stringainiziale)
                     {
-                        lblTesto.Content = "Valore CheckSum SHA256: Convalidato!";
+                        foto2.Visibility = Visibility.Visible;
                     }
                 }
-                else
-                {
-                    lblTesto.Content = "Non è stato possibile leggere una checksum SHA256";
-                }
+
             }
             
         }

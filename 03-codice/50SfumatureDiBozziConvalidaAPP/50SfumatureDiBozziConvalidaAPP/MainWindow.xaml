@@ -53,6 +53,24 @@
                 X2="150" Y2="60"
                 Stroke="White"
                 StrokeThickness="4" Margin="823,28,-823,154" Grid.RowSpan="2"/>
+            <Label Content="status:" Foreground="White" FontSize="30" FontFamily="Rockwell" Margin="854,209,104,136" Grid.RowSpan="2"/>
+            <Line
+                X1="10" Y1="60"
+                X2="150" Y2="60"
+                Stroke="White"
+                StrokeThickness="4" Margin="823,196,-823,-14" Grid.RowSpan="2"/>
+            <Label Content="PGP:" Foreground="Gray" FontSize="30" FontFamily="Rockwell" Margin="796,124,162,-14" Grid.Row="1"/>
+            <Label Content="SHA256:" Foreground="Gray" FontSize="30" FontFamily="Rockwell" Margin="796,49,147,61" Grid.Row="1"/>
+            <Rectangle
+                Stroke="White" StrokeThickness="4"
+                Margin="945,52,79,90" Grid.Row="1"/>
+            <Image x:Name="foto1" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\foto.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
+            <Image x:Name="foto2" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\wao.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
+            <Rectangle
+                Stroke="White" StrokeThickness="4"
+                Margin="945,124,79,18" Grid.Row="1"/>
+            <Image x:Name="foto3" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\foto.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
+            <Image x:Name="foto4" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\wao.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
         </Grid>
         <StackPanel Height="215"/>
     </StackPanel>
