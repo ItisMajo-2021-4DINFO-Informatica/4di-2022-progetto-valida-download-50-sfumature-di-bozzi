@@ -37,3 +37,5 @@ C:\Users\Utente\Desktop\ciao\4di-2022-progetto-valida-download-50-sfumature-di-b
 C:\Users\Utente\Desktop\ciao\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\obj\Debug\net5.0-windows\50SfumatureDiBozziConvalidaAPP.dll
 C:\Users\Utente\Desktop\ciao\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\obj\Debug\net5.0-windows\ref\50SfumatureDiBozziConvalidaAPP.dll
 C:\Users\Utente\Desktop\ciao\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\obj\Debug\net5.0-windows\50SfumatureDiBozziConvalidaAPP.pdb
+C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\PgpCore.dll
+C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll

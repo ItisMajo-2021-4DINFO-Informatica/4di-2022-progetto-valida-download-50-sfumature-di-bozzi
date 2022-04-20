@@ -16,6 +16,7 @@ using System.IO;
 using Microsoft.Win32;
 using System.Security.Cryptography;
 using System.Diagnostics;
+using PgpCore;
 
 namespace _50SfumatureDiBozziConvalidaAPP
 {
@@ -53,10 +54,10 @@ namespace _50SfumatureDiBozziConvalidaAPP
         {
             using (SHA256 sHA256 = SHA256.Create())
             {
-                using (FileStream lettore = File.OpenRead(nomeFile))
-                {
-                    return BitConverter.ToString(sHA256.ComputeHash(lettore));
-                }
+                    using (FileStream lettore = File.OpenRead(nomeFile))
+                    {
+                        return BitConverter.ToString(sHA256.ComputeHash(lettore));
+                    }
             }
         }
 

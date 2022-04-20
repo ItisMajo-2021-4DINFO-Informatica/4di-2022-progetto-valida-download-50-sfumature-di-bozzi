@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "tkhw/LcDTS5RPigshaPQ57lF1YqLg9hvwYIYkBM5z2F0g/BwcPjF90WaQAJOB2V+q3b1M5PXcwIU2HKXmQ0uVw==",
+  "dgSpecHash": "xOXgO2ObBlSM/oLyA4wpzNNFP/6wDfHidNGhx7i42MZ9pRV8HGMgO4SvaOdoKe2fuJ5w1JjGW8c3iDxGj0Lt7w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Utente\\Desktop\\ciao\\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Utente\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Utente\\.nuget\\packages\\pgpcore\\5.5.0\\pgpcore.5.5.0.nupkg.sha512",
+    "C:\\Users\\Utente\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512"
+  ],
   "logs": []
 }

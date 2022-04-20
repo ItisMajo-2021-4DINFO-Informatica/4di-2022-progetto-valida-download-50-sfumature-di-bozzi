@@ -1,11 +1,63 @@
 {
   "version": 3,
   "targets": {
-    "net5.0-windows7.0": {}
+    "net5.0-windows7.0": {
+      "PgpCore/5.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Portable.BouncyCastle": "1.8.9"
+        },
+        "compile": {
+          "lib/netstandard2.0/PgpCore.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/PgpCore.dll": {}
+        }
+      },
+      "Portable.BouncyCastle/1.8.9": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/BouncyCastle.Crypto.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "PgpCore/5.5.0": {
+      "sha512": "gzuO78gtgNtYuCgpJcI7aQK5RSOxv9etTdKeg4TNU+7p+8B+Wtu5F5tNrEFZin5v5pHGruK5m0tBzCUH0134DQ==",
+      "type": "package",
+      "path": "pgpcore/5.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/PgpCore.dll",
+        "pgpcore.5.5.0.nupkg.sha512",
+        "pgpcore.nuspec"
+      ]
+    },
+    "Portable.BouncyCastle/1.8.9": {
+      "sha512": "wlJo8aFoeyl+W93iFXTK5ShzDYk5WBqoUPjTNEM0Xv9kn1H+4hmuCjF0/n8HLm9Nnp1aY6KNndWqQTNk+NGgRQ==",
+      "type": "package",
+      "path": "portable.bouncycastle/1.8.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net40/BouncyCastle.Crypto.dll",
+        "lib/net40/BouncyCastle.Crypto.xml",
+        "lib/netstandard2.0/BouncyCastle.Crypto.dll",
+        "lib/netstandard2.0/BouncyCastle.Crypto.xml",
+        "portable.bouncycastle.1.8.9.nupkg.sha512",
+        "portable.bouncycastle.nuspec"
+      ]
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0-windows7.0": []
+    "net5.0-windows7.0": [
+      "PgpCore >= 5.5.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Utente\\.nuget\\packages\\": {},
@@ -15,11 +67,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utente\\Desktop\\ciao\\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
+      "projectUniqueName": "C:\\Users\\Utente\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
       "projectName": "50SfumatureDiBozziConvalidaAPP",
-      "projectPath": "C:\\Users\\Utente\\Desktop\\ciao\\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
+      "projectPath": "C:\\Users\\Utente\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
       "packagesPath": "C:\\Users\\Utente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utente\\Desktop\\ciao\\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\obj\\",
+      "outputPath": "C:\\Users\\Utente\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
@@ -52,6 +104,12 @@
     "frameworks": {
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
+        "dependencies": {
+          "PgpCore": {
+            "target": "Package",
+            "version": "[5.5.0, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",
