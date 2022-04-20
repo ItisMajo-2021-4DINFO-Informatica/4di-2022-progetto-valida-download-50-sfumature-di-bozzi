@@ -8,7 +8,7 @@
         Title="Verifica download" Height="608" Width="1074">
     <StackPanel>
         <StackPanel.Background>
-            <ImageBrush ImageSource="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\poi.jpg"/>
+            <ImageBrush ImageSource="C:\Users\Utente\Desktop\ciao\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\poi.jpg"/>
         </StackPanel.Background>
 
         <Label x:Name="label1" Content="Convalida File" Margin="10" Foreground="White" Style="{StaticResource CustomFont}" FontSize="50" HorizontalAlignment="Center"/>
@@ -64,13 +64,13 @@
             <Rectangle
                 Stroke="White" StrokeThickness="4"
                 Margin="945,52,79,90" Grid.Row="1"/>
-            <Image x:Name="foto1" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\foto.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
-            <Image x:Name="foto2" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\wao.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
+            <Image x:Name="foto1" Source="C:\Users\Utente\Desktop\ciao\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\foto.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
+            <Image x:Name="foto2" Source="C:\Users\Utente\Desktop\ciao\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\wao.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
                 Margin="945,124,79,18" Grid.Row="1"/>
-            <Image x:Name="foto3" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\foto.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
-            <Image x:Name="foto4" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\wao.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
+            <Image x:Name="foto3" Source="C:\Users\Utente\Desktop\ciao\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\foto.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
+            <Image x:Name="foto4" Source="C:\Users\Utente\Desktop\ciao\4di-2022-progetto-valida-download-50-sfumature-di-bozzi\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\wao.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
         </Grid>
         <StackPanel Height="215"/>
     </StackPanel>

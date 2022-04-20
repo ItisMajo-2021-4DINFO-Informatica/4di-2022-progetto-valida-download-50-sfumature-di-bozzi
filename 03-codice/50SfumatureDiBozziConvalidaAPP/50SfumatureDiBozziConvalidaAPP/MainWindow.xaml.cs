@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using Microsoft.Win32;
 using System.Security.Cryptography;
+using System.Diagnostics;
 
 namespace _50SfumatureDiBozziConvalidaAPP
 {
@@ -97,7 +98,12 @@ namespace _50SfumatureDiBozziConvalidaAPP
 
         private void btnVerificaPGP_Click(object sender, RoutedEventArgs e)
         {
-
+            static void Main(string[] args)
+            {
+                var app = new App();
+                app.InitializeComponent();
+                app.Run();
+            }
         }
     }
 }
