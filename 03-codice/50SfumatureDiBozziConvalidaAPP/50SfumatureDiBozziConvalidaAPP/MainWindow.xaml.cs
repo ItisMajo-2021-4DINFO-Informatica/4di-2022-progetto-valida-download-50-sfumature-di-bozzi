@@ -32,7 +32,7 @@ namespace _50SfumatureDiBozziConvalidaAPP
         {
             InitializeComponent();
         }
-        
+
         private void btnCercaFile_Click(object sender, RoutedEventArgs e)
         {
             string accorciato;
@@ -41,12 +41,12 @@ namespace _50SfumatureDiBozziConvalidaAPP
             {
                 nomeFile = openFileDialog.FileName;
                 accorciato = nomeFile.Replace("C:\\Users\\Utente\\Desktop\\", "..\\");
-                lblTesto.Content = accorciato;
+                //lblTesto.Content = accorciato;
 
             }
             else
             {
-                lblTesto.Content = "Riprova, nessun file è stato inserito";
+                //lblTesto.Content = "Riprova, nessun file è stato inserito";
             }
         }
 
@@ -54,10 +54,10 @@ namespace _50SfumatureDiBozziConvalidaAPP
         {
             using (SHA256 sHA256 = SHA256.Create())
             {
-                    using (FileStream lettore = File.OpenRead(nomeFile))
-                    {
-                        return BitConverter.ToString(sHA256.ComputeHash(lettore));
-                    }
+                using (FileStream lettore = File.OpenRead(nomeFile))
+                {
+                    return BitConverter.ToString(sHA256.ComputeHash(lettore));
+                }
             }
         }
 
@@ -66,7 +66,7 @@ namespace _50SfumatureDiBozziConvalidaAPP
             string stringaSHA256 = SHA256CheckSum(nomeFile);
             stringafinale = stringaSHA256.Replace("-", "").ToLower();
 
-            lblTesto.Content = stringafinale;
+            //lblTesto.Content = stringafinale;
 
             foto2.Visibility = Visibility.Hidden;
             foto1.Visibility = Visibility.Hidden;
@@ -78,13 +78,13 @@ namespace _50SfumatureDiBozziConvalidaAPP
 
                     while (!lettore.EndOfStream)
                     {
-                        stringainiziale = lettore.ReadLine().Substring(0,64);
+                        stringainiziale = lettore.ReadLine().Substring(0, 64);
                     }
                 }
                 if (stringainiziale != "")
                 {
                     if (stringafinale == stringainiziale)
-                    { 
+                    {
                         foto1.Visibility = Visibility.Visible;
                     }
                     else if (stringafinale != stringainiziale)
@@ -94,17 +94,25 @@ namespace _50SfumatureDiBozziConvalidaAPP
                 }
 
             }
-            
+
         }
 
         private void btnVerificaPGP_Click(object sender, RoutedEventArgs e)
         {
-            static void Main(string[] args)
-            {
-                var app = new App();
-                app.InitializeComponent();
-                app.Run();
-            }
+            ProcessStartInfo pInfo = new ProcessStartInfo("cmd.exe");
+            pInfo.WorkingDirectory = @"C:\Windows\system32";
+            
+            Process p = Process.Start(pInfo);
+        }
+
+        private void btnNascondi_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnMostra_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

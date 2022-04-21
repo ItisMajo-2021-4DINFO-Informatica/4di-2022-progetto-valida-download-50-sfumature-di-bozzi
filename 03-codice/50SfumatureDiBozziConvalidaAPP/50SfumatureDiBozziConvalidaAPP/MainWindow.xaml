@@ -24,10 +24,9 @@
                 Margin="40,33,767,44"/>
             <Line
                 X1="0" Y1="60"
-                X2="550" Y2="60"
+                X2="990" Y2="60"
                 Stroke="White"
-                StrokeThickness="2" Margin="52,34,355,46" Grid.Row="1" />
-            <Label x:Name="lblTesto" Margin="18,48,433,92" FontSize="15" Style="{StaticResource CustomFont}" Grid.Row="1" Foreground="White" HorizontalContentAlignment="Center"/>
+                StrokeThickness="2" Margin="45,157,0,158" Grid.RowSpan="2" />
             <Button x:Name="btnCalcolaSHA" Content="CheckSum SHA256" Margin="468,122,468,83" Click="btnCalcolaSHA_Click" Style="{StaticResource btnBlue}"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
@@ -41,6 +40,9 @@
             <Rectangle
                 Stroke="White" StrokeThickness="4"
                 Margin="768,33,38,44"/>
+            <Rectangle
+                Stroke="White" StrokeThickness="4"
+                Margin="45,11,361,-14" Grid.Row="1"/>
             <Label Content="SHA256" Foreground="White" FontSize="40" FontStyle="Oblique" FontFamily="Rockwell" Margin="458,30,446,132"/>
             <Line
                 X1="10" Y1="60"
@@ -53,24 +55,32 @@
                 X2="150" Y2="60"
                 Stroke="White"
                 StrokeThickness="4" Margin="823,28,-823,154" Grid.RowSpan="2"/>
-            <Label Content="status:" Foreground="White" FontSize="30" FontFamily="Rockwell" Margin="854,209,104,136" Grid.RowSpan="2"/>
+            <Label Content="status:" Foreground="White" FontSize="30" FontFamily="Rockwell" Margin="854,6,104,104" Grid.Row="1"/>
             <Line
                 X1="10" Y1="60"
                 X2="150" Y2="60"
                 Stroke="White"
-                StrokeThickness="4" Margin="823,196,-823,-14" Grid.RowSpan="2"/>
-            <Label Content="PGP:" Foreground="Gray" FontSize="30" FontFamily="Rockwell" Margin="796,124,162,-14" Grid.Row="1"/>
-            <Label Content="SHA256:" Foreground="Gray" FontSize="30" FontFamily="Rockwell" Margin="796,49,147,61" Grid.Row="1"/>
+                StrokeThickness="4" Margin="823,226,-823,-44" Grid.RowSpan="2"/>
+            <Label Content="PGP:" Foreground="Gray" FontSize="30" FontFamily="Rockwell" Margin="796,144,162,-34" Grid.Row="1"/>
+            <Label Content="SHA256:" Foreground="Gray" FontSize="30" FontFamily="Rockwell" Margin="796,79,147,0" Grid.Row="1" Height="73" VerticalAlignment="Top"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
-                Margin="945,52,79,90" Grid.Row="1"/>
+                Margin="945,79,79,63" Grid.Row="1"/>
             <Image x:Name="foto1" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\foto.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
             <Image x:Name="foto2" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\wao.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
-                Margin="945,124,79,18" Grid.Row="1"/>
+                Margin="945,144,79,-2" Grid.Row="1"/>
             <Image x:Name="foto3" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\foto.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
             <Image x:Name="foto4" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\wao.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
+            <Button x:Name="btnMostra" Content="Mostra" Margin="58,27,704,126" Click="btnMostra_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+            <Button x:Name="btnNascondi" Content="Nascondi" Margin="375,27,372,126" Click="btnNascondi_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+            <Label x:Name="lblx1" Content="1) " Foreground="White" Margin="58,71,704,84" Grid.Row="1"/>
+            <Label x:Name="lblx2" Content="2) " Foreground="White" Margin="58,109,704,46" Grid.Row="1"/>
+            <Label x:Name="lblx3" Content="3) " Foreground="White" Margin="58,147,704,8" Grid.Row="1"/>
+            <Label x:Name="lblx4" Content="4) " Foreground="White" Margin="375,71,375,84" Grid.Row="1"/>
+            <Label x:Name="lblx5" Content="5) " Foreground="White" Margin="375,109,374,46" Grid.Row="1"/>
+            <Label x:Name="lblx6" Content="6) " Foreground="White" Margin="375,147,378,8" Grid.Row="1"/>
         </Grid>
         <StackPanel Height="215"/>
     </StackPanel>
