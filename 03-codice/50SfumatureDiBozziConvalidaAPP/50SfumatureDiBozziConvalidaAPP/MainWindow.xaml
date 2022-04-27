@@ -75,10 +75,19 @@
             <Image x:Name="foto4" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\wao.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
             <Button x:Name="btnMostra" Content="Mostra" Margin="58,27,704,126" Click="btnMostra_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
             <Button x:Name="btnNascondi" Content="Nascondi" Margin="375,27,372,126" Click="btnNascondi_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
-            <Label x:Name="lblx1" Content="1) " Foreground="White" Margin="58,71,704,84" Grid.Row="1"/>
-            <Label x:Name="lblx2" Content="2) " Foreground="White" Margin="58,109,704,46" Grid.Row="1"/>
-            <Label x:Name="lblx3" Content="3) " Foreground="White" Margin="58,147,704,8" Grid.Row="1"/>
+            <Label x:Name="lblx1" Content="1) Installa il seguente programma. --> " Foreground="White" Margin="58,71,704,84" Grid.Row="1"/>
+            
+            <TextBlock FontSize="15" Margin="296,73,698,86" Grid.Row="1">
+                    <Hyperlink Foreground="Gray" NavigateUri="https://files.gpg4win.org/gpg4win-4.0.2.exe">link</Hyperlink>
+            </TextBlock>
+
+            <Label x:Name="lblx2" Content="2) Importa la fingerprint cliccando qui. --> " Foreground="White" Margin="58,109,704,46" Grid.Row="1"/>
+            <Button x:Name="btnCopia" Content="" Margin="296,113,738,51" Click="btnCopia_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+
+            <Label x:Name="lblx3" Content="3) Inserisci la linea di comando e verifica se corretta. " Foreground="White" Margin="58,147,704,8" Grid.Row="1"/>
+            
             <Label x:Name="lblx4" Content="4) " Foreground="White" Margin="375,71,375,84" Grid.Row="1"/>
+            
             <Label x:Name="lblx5" Content="5) " Foreground="White" Margin="375,109,374,46" Grid.Row="1"/>
             <Label x:Name="lblx6" Content="6) " Foreground="White" Margin="375,147,378,8" Grid.Row="1"/>
         </Grid>

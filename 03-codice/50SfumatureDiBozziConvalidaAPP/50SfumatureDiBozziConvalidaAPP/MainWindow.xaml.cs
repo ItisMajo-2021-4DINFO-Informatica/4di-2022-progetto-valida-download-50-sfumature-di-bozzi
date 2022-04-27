@@ -16,7 +16,6 @@ using System.IO;
 using Microsoft.Win32;
 using System.Security.Cryptography;
 using System.Diagnostics;
-using PgpCore;
 
 namespace _50SfumatureDiBozziConvalidaAPP
 {
@@ -114,5 +113,21 @@ namespace _50SfumatureDiBozziConvalidaAPP
         {
 
         }
+
+        private void btnCopia_Click(object sender, RoutedEventArgs e)
+        {
+            string abc = "gpg --recv-keys 3DBDC284";
+
+            if(abc != "")
+            {
+                Clipboard.SetText(abc);
+                MessageBox.Show("linea di comando copiata negli appunti.");
+            }
+        }
+        /* var name = "PATH";
+var scope = EnvironmentVariableTarget.Machine; // or User
+var oldValue = Environment.GetEnvironmentVariable(name, scope);
+var newValue  = oldValue + @";C:\Program Files\MySQL\MySQL Server 5.1\bin\\";
+Environment.SetEnvironmentVariable(name, newValue, scope); */
     }
 }
