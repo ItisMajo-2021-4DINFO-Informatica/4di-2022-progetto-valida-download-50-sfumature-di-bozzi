@@ -99,16 +99,9 @@ namespace _50SfumatureDiBozziConvalidaAPP
         private void btnVerificaPGP_Click(object sender, RoutedEventArgs e)
         {
             ProcessStartInfo pInfo = new ProcessStartInfo("cmd.exe");
-            pInfo.WorkingDirectory = @"C:\Windows\system32";
-            
-            Process p = Process.Start(pInfo);
+            pInfo.WorkingDirectory = @"C:\Windows\System32";
 
-            //Aggiunta del percorso mancante GPG alla console avviata.
-            var name = "PATH";
-            var scope = EnvironmentVariableTarget.Machine; // or User
-            var oldValue = Environment.GetEnvironmentVariable(name, scope);
-            var newValue = oldValue + @";C:\Program Files (x86)\GnuPG\bin";
-            Environment.SetEnvironmentVariable(name, newValue, scope);
+            Process p = Process.Start(pInfo);
         }
 
         private void btnNascondi_Click(object sender, RoutedEventArgs e)
@@ -123,14 +116,24 @@ namespace _50SfumatureDiBozziConvalidaAPP
 
         private void btnCopia_Click(object sender, RoutedEventArgs e)
         {
+            string xyz = "setx /M path \"%PATH%,C:\\Program Files (x86)\\Gpg4win\\..\\GnuPG\\bin\"";
+
+            if (xyz != "")
+            {
+                Clipboard.SetText(xyz);
+                MessageBox.Show("linea di comando copiata negli appunti.");
+            }
+        }
+
+        private void btnCopia2_Click(object sender, RoutedEventArgs e)
+        {
             string abc = "gpg --recv-keys 3DBDC284";
 
-            if(abc != "")
+            if (abc != "")
             {
                 Clipboard.SetText(abc);
                 MessageBox.Show("linea di comando copiata negli appunti.");
             }
         }
-
     }
 }
