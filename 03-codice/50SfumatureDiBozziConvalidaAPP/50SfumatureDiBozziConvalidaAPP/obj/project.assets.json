@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net5.0-windows7.0": {
+      "BouncyCastle/1.8.9": {
+        "type": "package",
+        "compile": {
+          "lib/BouncyCastle.Crypto.dll": {}
+        },
+        "runtime": {
+          "lib/BouncyCastle.Crypto.dll": {}
+        }
+      },
       "PgpCore/5.5.0": {
         "type": "package",
         "dependencies": {
@@ -26,6 +35,19 @@
     }
   },
   "libraries": {
+    "BouncyCastle/1.8.9": {
+      "sha512": "axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
+      "type": "package",
+      "path": "bouncycastle/1.8.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "bouncycastle.1.8.9.nupkg.sha512",
+        "bouncycastle.nuspec",
+        "lib/BouncyCastle.Crypto.dll"
+      ]
+    },
     "PgpCore/5.5.0": {
       "sha512": "gzuO78gtgNtYuCgpJcI7aQK5RSOxv9etTdKeg4TNU+7p+8B+Wtu5F5tNrEFZin5v5pHGruK5m0tBzCUH0134DQ==",
       "type": "package",
@@ -56,31 +78,25 @@
   },
   "projectFileDependencyGroups": {
     "net5.0-windows7.0": [
+      "BouncyCastle >= 1.8.9",
       "PgpCore >= 5.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Utente\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\matte\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Utente\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
+      "projectUniqueName": "C:\\Users\\matte\\OneDrive\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
       "projectName": "50SfumatureDiBozziConvalidaAPP",
-      "projectPath": "C:\\Users\\Utente\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
-      "packagesPath": "C:\\Users\\Utente\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Utente\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\obj\\",
+      "projectPath": "C:\\Users\\matte\\OneDrive\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
+      "packagesPath": "C:\\Users\\matte\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\matte\\OneDrive\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Utente\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\matte\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0-windows7.0"
@@ -105,6 +121,10 @@
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
         "dependencies": {
+          "BouncyCastle": {
+            "target": "Package",
+            "version": "[1.8.9, )"
+          },
           "PgpCore": {
             "target": "Package",
             "version": "[5.5.0, )"
@@ -131,5 +151,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Il pacchetto 'BouncyCastle 1.8.9' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' e non mediante il framework di destinazione del progetto 'net5.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
 }

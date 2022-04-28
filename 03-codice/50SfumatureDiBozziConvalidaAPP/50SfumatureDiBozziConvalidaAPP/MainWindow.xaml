@@ -8,7 +8,7 @@
         Title="Verifica download" Height="608" Width="1074" ResizeMode="NoResize">
     <StackPanel>
         <StackPanel.Background>
-            <ImageBrush ImageSource="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\poi.jpg"/>
+            <ImageBrush ImageSource="https://www.hoteldonandres.com/wp-content/uploads/2016/10/blackboard.jpg"/>
         </StackPanel.Background>
 
         <Label x:Name="label1" Content="Convalida File" Margin="10" Foreground="White" Style="{StaticResource CustomFont}" FontSize="50" HorizontalAlignment="Center"/>
@@ -36,13 +36,13 @@
                 X2="150" Y2="60"
                 Stroke="White"
                 StrokeThickness="4" Margin="91,28,-91,154" Grid.RowSpan="2"/>
-            <Button x:Name="btnVerificaPGP" Content="Chiave PGP" Margin="830,122,104,83" Click="btnVerificaPGP_Click" Style="{StaticResource btnBlue}"/>
+            <Button x:Name="btnVerifica" Content="Verifica PGP" Margin="833,118,103,87" Click="btnVerifica_Click" Style="{StaticResource btnBlue}"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
                 Margin="768,33,38,44"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
-                Margin="45,11,361,-14" Grid.Row="1"/>
+                Margin="45,11,361,0" Grid.Row="1"/>
             <Label Content="SHA256" Foreground="White" FontSize="40" FontStyle="Oblique" FontFamily="Rockwell" Margin="458,30,446,132"/>
             <Line
                 X1="10" Y1="60"
@@ -66,32 +66,29 @@
             <Rectangle
                 Stroke="White" StrokeThickness="4"
                 Margin="945,79,79,63" Grid.Row="1"/>
-            <Image x:Name="foto1" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\foto.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
-            <Image x:Name="foto2" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\wao.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
+            <Image x:Name="foto1" Source="https://www.citypng.com/public/uploads/preview/-31622652360keqnmdomq3.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
+            <Image x:Name="foto2" Source="https://www.pinclipart.com/picdir/big/421-4218318_red-cross-transparent-background-clipart.png" Margin="944,55,78,94" Grid.Row="1" Visibility="Hidden"/>
             <Rectangle
                 Stroke="White" StrokeThickness="4"
                 Margin="945,144,79,-2" Grid.Row="1"/>
-            <Image x:Name="foto3" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\foto.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
-            <Image x:Name="foto4" Source="C:\Users\Utente\Desktop\ciao\03-codice\50SfumatureDiBozziConvalidaAPP\50SfumatureDiBozziConvalidaAPP\bin\Debug\net5.0-windows\wao.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
+            <Image x:Name="foto3" Source="https://www.citypng.com/public/uploads/preview/-31622652360keqnmdomq3.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
+            <Image x:Name="foto4" Source="https://www.pinclipart.com/picdir/big/421-4218318_red-cross-transparent-background-clipart.png" Margin="944,127,78,22" Grid.Row="1" Visibility="Hidden"/>
             <Button x:Name="btnMostra" Content="Mostra" Margin="58,27,704,126" Click="btnMostra_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
             <Button x:Name="btnNascondi" Content="Nascondi" Margin="375,27,372,126" Click="btnNascondi_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
-            <Label x:Name="lblx1" Content="1) Installa il seguente programma. --> " Foreground="White" Margin="58,71,704,84" Grid.Row="1"/>
             
-            <TextBlock FontSize="15" Margin="296,73,698,86" Grid.Row="1">
-                    <Hyperlink Foreground="Gray" NavigateUri="https://files.gpg4win.org/gpg4win-4.0.2.exe">link</Hyperlink>
-            </TextBlock>
+            <Label Visibility="Hidden" x:Name="lblx1" Content="1) Installa il seguente programma. -------> " Foreground="White" Margin="58,71,704,84" Grid.Row="1"/>
+            <Button Visibility="Hidden" x:Name="btnCopia" Content="" Margin="296,130,738,34" Click="btnCopia_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
 
-            <Label x:Name="lblx2" Content="2) Prima di iniziare, digita questa linea. --> " Foreground="White" Margin="58,109,704,46" Grid.Row="1"/>
-            <Button x:Name="btnCopia" Content="" Margin="296,113,738,51" Click="btnCopia_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+            <Label Visibility="Hidden" x:Name="lblx2" Content="2) Prima di iniziare, digita questa linea. --> " Foreground="White" Margin="58,126,758,29" Grid.Row="1"/>
+            <Button Visibility="Hidden" x:Name="btnLink" Content="" Margin="296,75,738,88" Click="btnLink_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
 
-            <Label x:Name="lblx3" Content="3) Importa la fingerprint da qui -->" Foreground="White" Margin="58,147,704,8" Grid.Row="1"/>
-            <Button x:Name="btnCopia2" Content="" Margin="296,151,738,12" Click="btnCopia2_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+            <Label Visibility="Hidden" x:Name="lblx4" Content="3) Importa la fingerprint da qui. -------------> " Foreground="White" Margin="375,71,423,84" Grid.Row="1"/>
+            <Button Visibility="Hidden" x:Name="btnCopia2" Content="" Margin="631,75,403,88" Click="btnCopia2_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
 
-            <Label x:Name="lblx4" Content="4)  " Foreground="White" Margin="375,71,375,84" Grid.Row="1"/>
-            
-            <Label x:Name="lblx5" Content="5) " Foreground="White" Margin="375,109,374,46" Grid.Row="1"/>
-            <Label x:Name="lblx6" Content="6) " Foreground="White" Margin="375,147,378,8" Grid.Row="1"/>
+            <Label Visibility="Hidden" x:Name="lblx5" Content="4) Verifica i file e chiudi la console. ---------->" Foreground="White" Margin="375,125,423,30" Grid.Row="1"/>
+            <Button Visibility="Hidden" x:Name="btnCopia3" Content="" Margin="631,130,403,33" Click="btnCopia3_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
         </Grid>
+
         <StackPanel Height="215"/>
     </StackPanel>
 </Window>
