@@ -102,6 +102,13 @@ namespace _50SfumatureDiBozziConvalidaAPP
             pInfo.WorkingDirectory = @"C:\Windows\system32";
             
             Process p = Process.Start(pInfo);
+
+            //Aggiunta del percorso mancante GPG alla console avviata.
+            var name = "PATH";
+            var scope = EnvironmentVariableTarget.Machine; // or User
+            var oldValue = Environment.GetEnvironmentVariable(name, scope);
+            var newValue = oldValue + @";C:\Program Files (x86)\GnuPG\bin";
+            Environment.SetEnvironmentVariable(name, newValue, scope);
         }
 
         private void btnNascondi_Click(object sender, RoutedEventArgs e)
@@ -124,10 +131,6 @@ namespace _50SfumatureDiBozziConvalidaAPP
                 MessageBox.Show("linea di comando copiata negli appunti.");
             }
         }
-        /* var name = "PATH";
-var scope = EnvironmentVariableTarget.Machine; // or User
-var oldValue = Environment.GetEnvironmentVariable(name, scope);
-var newValue  = oldValue + @";C:\Program Files\MySQL\MySQL Server 5.1\bin\\";
-Environment.SetEnvironmentVariable(name, newValue, scope); */
+
     }
 }
