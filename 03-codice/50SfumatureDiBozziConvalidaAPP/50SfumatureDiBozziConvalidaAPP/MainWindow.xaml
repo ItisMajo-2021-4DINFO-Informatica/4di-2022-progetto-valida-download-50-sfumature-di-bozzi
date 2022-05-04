@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:_50SfumatureDiBozziConvalidaAPP"
         mc:Ignorable="d"
         Title="Verifica download" Height="608" Width="1074" ResizeMode="NoResize">
-    <StackPanel>
+    <StackPanel x:Name="Finestra">
         <StackPanel.Background>
             <ImageBrush ImageSource="https://www.hoteldonandres.com/wp-content/uploads/2016/10/blackboard.jpg"/>
         </StackPanel.Background>
@@ -87,6 +87,7 @@
 
             <Label Visibility="Hidden" x:Name="lblx5" Content="4) Verifica i file e chiudi la console. ---------->" Foreground="White" Margin="375,125,423,30" Grid.Row="1"/>
             <Button Visibility="Hidden" x:Name="btnCopia3" Content="" Margin="631,130,403,33" Click="btnCopia3_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+            <Label x:Name="Frame" Margin="0,0,832,212" Foreground="White"/>
         </Grid>
 
         <StackPanel Height="215"/>

@@ -100,68 +100,27 @@ namespace _50SfumatureDiBozziConvalidaAPP
         }
         private void btnVerifica_Click(object sender, RoutedEventArgs e)
         {
-        }
-        static async Task<string> Verifica(string publicKeyFilename, string signedFilename)
-        {
-            FileInfo publicKey = new FileInfo(basePath + publicKeyFilename);
-            EncryptionKeys encryptionKeys = new EncryptionKeys(publicKey);
+            string asc = "C:\\Users\\Utente\\Desktop\\openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256.asc";
+            string sha = "C:\\Users\\Utente\\Desktop\\openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256";
 
-            FileInfo inputFile = new FileInfo(basePath + signedFilename);
-
-            PGP pgp = new PGP(encryptionKeys);
-            bool verified = await pgp.VerifyFileAsync(inputFile);
-
-            if (verified)
+            using (Process pProcess = new Process())
             {
-                return "The content is signed with the given public key";
-            }
-            else
-            {
-                return "WARNING The content is NOT signed with the given public key";
-            }
-        }
-
-        /*public class iTransactVerifier
-        {
-            private const string PublicKey = @"-----BEGIN PGP PUBLIC KEY BLOCK-----
-Version: 4.5
-
-mQCNAjZu
------END PGP PUBLIC KEY BLOCK-----";
-
-            public static bool Verify(string signature, string data)
-            {
-                var inputStream = ASCIIEncoding.ASCII.GetBytes(signature);
-
-                PgpPublicKey publicKey = ReadPublicKeyFromString();
-                var stream = PgpUtilities.GetDecoderStream(inputStream);
-
-                PgpObjectFactory pgpFact = new PgpObjectFactory(stream);
-
-                PgpSignatureList sList = pgpFact.NextPgpObject() as PgpSignatureList;
-                if (sList == null)
+                pProcess.StartInfo.FileName = "cmd.exe";
+                pProcess.StartInfo.Arguments = "/k gpg --recv-keys 3DBDC284";
+                pProcess.StartInfo.Arguments = "/k gpg --verify " + asc + " " + sha;
+                pProcess.StartInfo.UseShellExecute = false;
+                pProcess.StartInfo.RedirectStandardOutput = true;
+                pProcess.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
                 {
-                    throw new InvalidOperationException("PgpObjectFactory could not create signature list");
-                }
-                PgpSignature firstSig = sList[0];
+                    Frame.Dispatcher.Invoke(() => { Frame.Content += e.Data + Environment.NewLine; });
+                });
 
-                firstSig.InitVerify(publicKey);
-                firstSig.Update(Encoding.UTF8.GetBytes(data));
+                pProcess.Start();
 
-                var verified = firstSig.Verify();
-                return verified;
             }
-
-    private static PgpPublicKey ReadPublicKeyFromString()
-            {
-                var varstream = ASCIIEncoding.ASCII.GetBytes(PublicKey);
-                var stream = PgpUtilities.GetDecoderStream(varstream);
-
-                PgpObjectFactory pgpFact = new PgpObjectFactory(stream);
-                var keyRing = (PgpPublicKeyRing)pgpFact.NextPgpObject();
-                return keyRing.GetPublicKey();
-            }
-        }*
+            
+        }
+      
 
         /*ProcessStartInfo pInfo = new ProcessStartInfo("cmd.exe");
         pInfo.WorkingDirectory = @"C:\Windows\System32";
