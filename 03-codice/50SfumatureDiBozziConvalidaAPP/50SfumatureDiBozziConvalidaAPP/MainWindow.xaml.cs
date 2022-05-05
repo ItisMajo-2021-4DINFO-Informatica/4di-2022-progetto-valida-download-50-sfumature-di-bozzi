@@ -103,7 +103,32 @@ namespace _50SfumatureDiBozziConvalidaAPP
             string asc = "C:\\Users\\Utente\\Desktop\\openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256.asc";
             string sha = "C:\\Users\\Utente\\Desktop\\openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256";
 
-            ProcessStartInfo start = new ProcessStartInfo();
+            var outputStream = new StreamWriter("output.txt");
+            Process process = new Process();
+            process.StartInfo.FileName = "ipconfig.exe";
+            process.StartInfo.UseShellExecute = false;
+            process.StartInfo.RedirectStandardOutput = true;
+            //process.StartInfo.Arguments = "/k gpg --recv-keys 3DBDC284";
+            //process.StartInfo.Arguments = "/k gpg --verify " + asc + " " + sha;
+
+            process.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
+            {
+                if (!String.IsNullOrEmpty(e.Data))
+                {
+                    outputStream.WriteLine(e.Data);
+                }
+            });
+
+            process.Start();
+            
+
+            process.BeginOutputReadLine();
+
+            process.WaitForExit();
+            process.Close();
+
+            outputStream.Close();
+            /*ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = "cmd.exe";
             start.UseShellExecute = false;
             start.RedirectStandardOutput = true;
@@ -136,7 +161,7 @@ namespace _50SfumatureDiBozziConvalidaAPP
 
                 if (info.Length < 4)
                     info.Delete();
-            }
+            }*/
 
         }
 
