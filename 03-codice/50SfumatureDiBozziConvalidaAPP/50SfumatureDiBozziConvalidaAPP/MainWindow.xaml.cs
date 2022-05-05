@@ -26,7 +26,6 @@ namespace _50SfumatureDiBozziConvalidaAPP
     /// </summary>
     public partial class MainWindow : Window
     {
-        static string basePath = @"C:\DemoFiles\";
         string nomeFile;
         string stringainiziale = "";
         string stringafinale = "";
@@ -103,152 +102,137 @@ namespace _50SfumatureDiBozziConvalidaAPP
             string asc = "C:\\Users\\Utente\\Desktop\\openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256.asc";
             string sha = "C:\\Users\\Utente\\Desktop\\openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256";
 
-            var outputStream = new StreamWriter("output.txt");
-            Process process = new Process();
-            process.StartInfo.FileName = "ipconfig.exe";
-            process.StartInfo.UseShellExecute = false;
-            process.StartInfo.RedirectStandardOutput = true;
-            //process.StartInfo.Arguments = "/k gpg --recv-keys 3DBDC284";
-            //process.StartInfo.Arguments = "/k gpg --verify " + asc + " " + sha;
-
-            process.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
+            using (Process start = new Process())
             {
-                if (!String.IsNullOrEmpty(e.Data))
+                start.StartInfo.FileName = "cmd.exe";
+                start.StartInfo.UseShellExecute = false;
+                start.StartInfo.RedirectStandardOutput = true;
+                start.StartInfo.Arguments = "/k gpg --recv-keys 3DBDC284";
+                start.StartInfo.CreateNoWindow = true;
+                //start.StartInfo.Arguments = "/k gpg --verify " + asc + " " + sha;
+
+                start.Start();
+                start.WaitForExit(1000);
+
+                using (Process start1 = new Process())
                 {
-                    outputStream.WriteLine(e.Data);
+                    start1.StartInfo.FileName = "cmd.exe";
+                    start1.StartInfo.UseShellExecute = false;
+                    start1.StartInfo.RedirectStandardOutput = true;
+                    //start1.StartInfo.Arguments = "/k gpg --recv-keys 3DBDC284";
+                    start1.StartInfo.Arguments = "/k gpg --verify " + asc + " " + sha;
+
+                    start1.Start();
+                    start1.WaitForExit();
                 }
-            });
 
-            process.Start();
-            
+                btnCalcolaSHA.Visibility = Visibility.Hidden;
+                btnCercaFile.Visibility = Visibility.Hidden;
+                btnVerifica.Visibility = Visibility.Hidden;
+                ciao.Visibility = Visibility.Hidden;
+                ciao1.Visibility = Visibility.Hidden;
+                ciao2.Visibility = Visibility.Hidden;
+                label2.Visibility = Visibility.Hidden;
+                label3.Visibility = Visibility.Hidden;
+                label4.Visibility = Visibility.Hidden;
+                linea1.Visibility = Visibility.Hidden;
+                linea3.Visibility = Visibility.Hidden;
+                linea5.Visibility = Visibility.Hidden;
 
-            process.BeginOutputReadLine();
-
-            process.WaitForExit();
-            process.Close();
-
-            outputStream.Close();
-            /*ProcessStartInfo start = new ProcessStartInfo();
-            start.FileName = "cmd.exe";
-            start.UseShellExecute = false;
-            start.RedirectStandardOutput = true;
-            start.Arguments = "/k gpg --recv-keys 3DBDC284";
-            start.Arguments = "/k gpg --verify " + asc + " " + sha;
-
-            using (Process pProcess = Process.Start(start))
-            {
-                using FileStream flusso = new FileStream("ciaociao.txt", FileMode.OpenOrCreate, FileAccess.Write)
-                {
-                    StreamReader reader = new StreamReader(flusso);
-
-                    for (; ; )
-                    {
-                    string textLine = reader.ReadLine();
-
-                    if (textLine == null)
-                        break;
-
-                    writer.WriteLine(textLine);
-                    }
-            
+                lblFinale.Visibility = Visibility.Visible;
+                rbtnNO.Visibility = Visibility.Visible;
+                rbtnSI.Visibility = Visibility.Visible;
+                rect1.Visibility = Visibility.Visible;
+                ciao5.Visibility = Visibility.Visible;
+                btnExtra.Visibility = Visibility.Visible;
+                label6.Visibility = Visibility.Visible;
+                Linea.Visibility = Visibility.Visible;
             }
 
-            if (File.Exists("ciaociao.txt"))
+        }
+
+
+
+
+
+        private void btnNascondi_Click(object sender, RoutedEventArgs e)
+        {
+            lblx1.Visibility = Visibility.Hidden;
+            lblx2.Visibility = Visibility.Hidden;
+            lblx4.Visibility = Visibility.Hidden;
+            lblx5.Visibility = Visibility.Hidden;
+            btnCopia.Visibility = Visibility.Hidden;
+            btnCopia2.Visibility = Visibility.Hidden;
+            btnCopia3.Visibility = Visibility.Hidden;
+            btnLink.Visibility = Visibility.Hidden;
+        }
+
+        private void btnMostra_Click(object sender, RoutedEventArgs e)
+        {
+            lblx1.Visibility = Visibility.Visible;
+            lblx2.Visibility = Visibility.Visible;
+            lblx4.Visibility = Visibility.Visible;
+            lblx5.Visibility = Visibility.Visible;
+            btnCopia.Visibility = Visibility.Visible;
+            btnCopia2.Visibility = Visibility.Visible;
+            btnCopia3.Visibility = Visibility.Visible;
+            btnLink.Visibility = Visibility.Visible;
+        }
+
+        private void btnCopia_Click(object sender, RoutedEventArgs e)
+        {
+            string xyz = "SET PATH=C:\\Program Files (x86)\\Gpg4win\\..\\GnuPG\\bin";
+
+            if (xyz != "")
             {
-                FileInfo info = new FileInfo("ciaociao.txt");
-
-                // if the error info is empty or just contains eof etc.
-
-                if (info.Length < 4)
-                    info.Delete();
-            }*/
-
+                Clipboard.SetText(xyz);
+                MessageBox.Show("linea di comando copiata negli appunti.");
+            }
         }
 
-
-
-
-    /*(using (StreamReader lettore = pProcess.StandardOutput)
-    {
-        string result = lettore.ReadToEnd();
-        Frame.Content = result;
-    }
-    pProcess.OutputDataReceived += new DataReceivedEventHandler((sender, e) =>
-    {
-        Frame.Dispatcher.Invoke(() => { Frame.Content += e.Data + Environment.NewLine; });
-    });
-
-    pProcess.Start();*/
-
-
-
-
-
-    /*ProcessStartInfo pInfo = new ProcessStartInfo("cmd.exe");
-    pInfo.WorkingDirectory = @"C:\Windows\System32";
-
-    Process p = Process.Start(pInfo);*/
-
-    private void btnNascondi_Click(object sender, RoutedEventArgs e)
-    {
-        lblx1.Visibility = Visibility.Hidden;
-        lblx2.Visibility = Visibility.Hidden;
-        lblx4.Visibility = Visibility.Hidden;
-        lblx5.Visibility = Visibility.Hidden;
-        btnCopia.Visibility = Visibility.Hidden;
-        btnCopia2.Visibility = Visibility.Hidden;
-        btnCopia3.Visibility = Visibility.Hidden;
-        btnLink.Visibility = Visibility.Hidden;
-    }
-
-    private void btnMostra_Click(object sender, RoutedEventArgs e)
-    {
-        lblx1.Visibility = Visibility.Visible;
-        lblx2.Visibility = Visibility.Visible;
-        lblx4.Visibility = Visibility.Visible;
-        lblx5.Visibility = Visibility.Visible;
-        btnCopia.Visibility = Visibility.Visible;
-        btnCopia2.Visibility = Visibility.Visible;
-        btnCopia3.Visibility = Visibility.Visible;
-        btnLink.Visibility = Visibility.Visible;
-    }
-
-    private void btnCopia_Click(object sender, RoutedEventArgs e)
-    {
-        string xyz = "SET PATH=C:\\Program Files (x86)\\Gpg4win\\..\\GnuPG\\bin";
-
-        if (xyz != "")
+        private void btnCopia2_Click(object sender, RoutedEventArgs e)
         {
-            Clipboard.SetText(xyz);
-            MessageBox.Show("linea di comando copiata negli appunti.");
+            string abc = "gpg --recv-keys 3DBDC284";
+
+            if (abc != "")
+            {
+                Clipboard.SetText(abc);
+                MessageBox.Show("linea di comando copiata negli appunti.");
+            }
         }
-    }
 
-    private void btnCopia2_Click(object sender, RoutedEventArgs e)
-    {
-        string abc = "gpg --recv-keys 3DBDC284";
-
-        if (abc != "")
+        private void btnLink_Click(object sender, RoutedEventArgs e)
         {
-            Clipboard.SetText(abc);
-            MessageBox.Show("linea di comando copiata negli appunti.");
+
         }
-    }
 
-    private void btnLink_Click(object sender, RoutedEventArgs e)
-    {
-
-    }
-
-    private void btnCopia3_Click(object sender, RoutedEventArgs e)
-    {
-        string poi = "gpg --verify C:\\openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256.asc C:\\openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256";
-
-        if (poi != "")
+        private void btnCopia3_Click(object sender, RoutedEventArgs e)
         {
-            Clipboard.SetText(poi);
-            MessageBox.Show("linea di comando copiata negli appunti.");
+            string poi = "gpg --verify C:\\openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256.asc C:\\openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256";
+
+            if (poi != "")
+            {
+                Clipboard.SetText(poi);
+                MessageBox.Show("linea di comando copiata negli appunti.");
+            }
+        }
+
+        private void rbtnSI_Click(object sender, RoutedEventArgs e)
+        {
+            foto3.Visibility = Visibility.Visible;
+            foto4.Visibility = Visibility.Hidden;
+        }
+
+        private void rbtnNO_Click(object sender, RoutedEventArgs e)
+        {
+            foto4.Visibility = Visibility.Visible;
+            foto3.Visibility = Visibility.Hidden;
+        }
+
+        private void btnExtra_Click(object sender, RoutedEventArgs e)
+        {
+            btnNascondi.Visibility = Visibility.Visible;
+            btnMostra.Visibility = Visibility.Visible;
         }
     }
-}
 }
