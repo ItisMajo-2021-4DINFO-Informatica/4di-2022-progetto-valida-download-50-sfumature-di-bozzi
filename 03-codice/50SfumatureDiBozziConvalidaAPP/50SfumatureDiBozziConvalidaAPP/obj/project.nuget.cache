@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "NxU4jq5aZGfCPWFpIuZzPZWa/wxcnWgiNtvB6TAC/O/8nhl8FyhZ87IWsB7oT0zhd7KG0Bi1hLvb5D2GEVc7Bg==",
+  "dgSpecHash": "FiVZjl1nnFAZCId01fP/RUrVmkIVRRo271VGZQxLUNkSs8WknkCOCaHmcrqpnAonpeMJFzGpiN5deJV0awevfg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Utente\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
+  "projectFilePath": "C:\\Users\\matte\\OneDrive\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Utente\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
-    "C:\\Users\\Utente\\.nuget\\packages\\pgpcore\\5.5.0\\pgpcore.5.5.0.nupkg.sha512",
-    "C:\\Users\\Utente\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512"
+    "C:\\Users\\matte\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
+    "C:\\Users\\matte\\.nuget\\packages\\pgpcore\\5.5.0\\pgpcore.5.5.0.nupkg.sha512",
+    "C:\\Users\\matte\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512"
   ],
   "logs": [
     {

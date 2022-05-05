@@ -234,5 +234,10 @@ namespace _50SfumatureDiBozziConvalidaAPP
             btnNascondi.Visibility = Visibility.Visible;
             btnMostra.Visibility = Visibility.Visible;
         }
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
+        }
     }
 }

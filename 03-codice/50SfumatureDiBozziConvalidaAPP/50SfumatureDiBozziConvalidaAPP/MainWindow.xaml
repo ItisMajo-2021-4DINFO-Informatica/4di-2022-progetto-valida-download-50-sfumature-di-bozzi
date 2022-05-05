@@ -85,10 +85,16 @@
             <Button Visibility="Hidden" x:Name="btnNascondi" Content="Nascondi" Margin="375,27,182,126" Click="btnNascondi_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
 
             <Label Visibility="Hidden" x:Name="lblx1" Content="1) Installa il seguente programma. -------> " Foreground="White" Margin="58,71,514,84" Grid.Row="1"/>
-            <Button Visibility="Hidden" x:Name="btnCopia" Content="" Margin="296,130,548,34" Click="btnCopia_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+            <Button Visibility="Hidden" x:Name="btnCopia" Margin="296,130,548,34" Click="btnCopia_Click" Style="{StaticResource btnBlue}" Grid.Row="1">
+            </Button>
 
             <Label Visibility="Hidden" x:Name="lblx2" Content="2) Prima di iniziare, digita questa linea. --> " Foreground="White" Margin="58,126,568,29" Grid.Row="1"/>
-            <Button Visibility="Hidden" x:Name="btnLink" Content="" Margin="296,75,548,88" Click="btnLink_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+            <Button Visibility="Hidden" x:Name="btnLink" Margin="296,75,548,88" Click="btnLink_Click" Style="{StaticResource btnBlue}" Grid.Row="1">
+                <Hyperlink x:Name="lnkGoogle" NavigateUri="https://www.gpg4win.org/get-gpg4win.html"
+                RequestNavigate="Hyperlink_RequestNavigate" >
+                    
+                </Hyperlink>
+            </Button>
 
             <Label Visibility="Hidden" x:Name="lblx4" Content="3) Importa la fingerprint da qui. -------------> " Foreground="White" Margin="375,71,232,84" Grid.Row="1"/>
             <Button Visibility="Hidden" x:Name="btnCopia2" Content="" Margin="631,75,212,88" Click="btnCopia2_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
