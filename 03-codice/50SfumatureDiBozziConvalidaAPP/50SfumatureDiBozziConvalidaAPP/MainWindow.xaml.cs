@@ -27,6 +27,7 @@ namespace _50SfumatureDiBozziConvalidaAPP
     public partial class MainWindow : Window
     {
         string nomeFile;
+        string NomeFile;
         string stringainiziale = "";
         string stringafinale = "";
         public MainWindow()
@@ -36,18 +37,17 @@ namespace _50SfumatureDiBozziConvalidaAPP
 
         private void btnCercaFile_Click(object sender, RoutedEventArgs e)
         {
-            string accorciato;
             OpenFileDialog openFileDialog = new OpenFileDialog();
             if (openFileDialog.ShowDialog() == true)
             {
                 nomeFile = openFileDialog.FileName;
-                accorciato = nomeFile.Replace("C:\\Users\\Utente\\Desktop\\", "..\\");
-                //lblTesto.Content = accorciato;
-
+                foto5.Visibility = Visibility.Visible;
+                foto6.Visibility = Visibility.Hidden;
             }
             else
             {
-                //lblTesto.Content = "Riprova, nessun file è stato inserito";
+                foto6.Visibility = Visibility.Visible;
+                foto5.Visibility = Visibility.Hidden;
             }
         }
 
@@ -64,16 +64,20 @@ namespace _50SfumatureDiBozziConvalidaAPP
 
         private void btnCalcolaSHA_Click(object sender, RoutedEventArgs e)
         {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == true)
+            {
+                NomeFile = openFileDialog.FileName.Replace("C:\\Users\\Utente\\Desktop\\","");
+            }
+
             string stringaSHA256 = SHA256CheckSum(nomeFile);
             stringafinale = stringaSHA256.Replace("-", "").ToLower();
 
-            //lblTesto.Content = stringafinale;
-
-            foto2.Visibility = Visibility.Hidden;
-            foto1.Visibility = Visibility.Hidden;
+            foto4.Visibility = Visibility.Hidden;
+            foto3.Visibility = Visibility.Hidden;
             if (stringafinale != "")
             {
-                using (FileStream flusso = new FileStream("openSUSE-Leap-15.3-3-NET-x86_64-Build38.1-Media.iso.sha256", FileMode.Open, FileAccess.Read))
+                using (FileStream flusso = new FileStream(NomeFile, FileMode.Open, FileAccess.Read))
                 {
                     StreamReader lettore = new StreamReader(flusso);
 
@@ -86,11 +90,11 @@ namespace _50SfumatureDiBozziConvalidaAPP
                 {
                     if (stringafinale == stringainiziale)
                     {
-                        foto1.Visibility = Visibility.Visible;
+                        foto3.Visibility = Visibility.Visible;
                     }
                     else if (stringafinale != stringainiziale)
                     {
-                        foto2.Visibility = Visibility.Visible;
+                        foto4.Visibility = Visibility.Visible;
                     }
                 }
 
@@ -203,7 +207,10 @@ namespace _50SfumatureDiBozziConvalidaAPP
 
         private void btnLink_Click(object sender, RoutedEventArgs e)
         {
-
+            Process Chrome = new Process();
+            Chrome.StartInfo.FileName = @"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe";
+            Chrome.StartInfo.Arguments = "https://www.gpg4win.org/thanks-for-download.html"; // If you have any arguments
+            Chrome.Start();
         }
 
         private void btnCopia3_Click(object sender, RoutedEventArgs e)
@@ -219,14 +226,14 @@ namespace _50SfumatureDiBozziConvalidaAPP
 
         private void rbtnSI_Click(object sender, RoutedEventArgs e)
         {
-            foto3.Visibility = Visibility.Visible;
-            foto4.Visibility = Visibility.Hidden;
+            foto1.Visibility = Visibility.Visible;
+            foto2.Visibility = Visibility.Hidden;
         }
 
         private void rbtnNO_Click(object sender, RoutedEventArgs e)
         {
-            foto4.Visibility = Visibility.Visible;
-            foto3.Visibility = Visibility.Hidden;
+            foto2.Visibility = Visibility.Visible;
+            foto1.Visibility = Visibility.Hidden;
         }
 
         private void btnExtra_Click(object sender, RoutedEventArgs e)
@@ -234,10 +241,6 @@ namespace _50SfumatureDiBozziConvalidaAPP
             btnNascondi.Visibility = Visibility.Visible;
             btnMostra.Visibility = Visibility.Visible;
         }
-        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
-        {
-            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
-            e.Handled = true;
-        }
+
     }
 }
