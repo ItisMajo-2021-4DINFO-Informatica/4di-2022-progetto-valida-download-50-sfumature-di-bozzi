@@ -1,0 +1,68 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "50SfumatureDiBozziConvalidaAPP/1.0.0": {
+        "dependencies": {
+          "BouncyCastle": "1.8.9",
+          "PgpCore": "5.5.0"
+        },
+        "runtime": {
+          "50SfumatureDiBozziConvalidaAPP.dll": {}
+        }
+      },
+      "BouncyCastle/1.8.9": {
+        "runtime": {
+          "lib/BouncyCastle.Crypto.dll": {
+            "assemblyVersion": "1.8.9.0",
+            "fileVersion": "1.8.20343.1"
+          }
+        }
+      },
+      "PgpCore/5.5.0": {
+        "dependencies": {
+          "Portable.BouncyCastle": "1.8.9"
+        },
+        "runtime": {
+          "lib/netstandard2.0/PgpCore.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.5.0.0"
+          }
+        }
+      },
+      "Portable.BouncyCastle/1.8.9": {}
+    }
+  },
+  "libraries": {
+    "50SfumatureDiBozziConvalidaAPP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "BouncyCastle/1.8.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-axnBgvdD5n+FnEG6efk/tfKuMFru7R/EoISH9zjh319yb3HD24TEHSAbNN/lTRT2ulOGRxDgOsCjkuk08iwWPg==",
+      "path": "bouncycastle/1.8.9",
+      "hashPath": "bouncycastle.1.8.9.nupkg.sha512"
+    },
+    "PgpCore/5.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gzuO78gtgNtYuCgpJcI7aQK5RSOxv9etTdKeg4TNU+7p+8B+Wtu5F5tNrEFZin5v5pHGruK5m0tBzCUH0134DQ==",
+      "path": "pgpcore/5.5.0",
+      "hashPath": "pgpcore.5.5.0.nupkg.sha512"
+    },
+    "Portable.BouncyCastle/1.8.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wlJo8aFoeyl+W93iFXTK5ShzDYk5WBqoUPjTNEM0Xv9kn1H+4hmuCjF0/n8HLm9Nnp1aY6KNndWqQTNk+NGgRQ==",
+      "path": "portable.bouncycastle/1.8.9",
+      "hashPath": "portable.bouncycastle.1.8.9.nupkg.sha512"
+    }
+  }
+}

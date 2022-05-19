@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "dgSpecHash": "NxU4jq5aZGfCPWFpIuZzPZWa/wxcnWgiNtvB6TAC/O/8nhl8FyhZ87IWsB7oT0zhd7KG0Bi1hLvb5D2GEVc7Bg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Utente\\Desktop\\ciao\\03-codice\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP\\50SfumatureDiBozziConvalidaAPP.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Utente\\.nuget\\packages\\bouncycastle\\1.8.9\\bouncycastle.1.8.9.nupkg.sha512",
+    "C:\\Users\\Utente\\.nuget\\packages\\pgpcore\\5.5.0\\pgpcore.5.5.0.nupkg.sha512",
+    "C:\\Users\\Utente\\.nuget\\packages\\portable.bouncycastle\\1.8.9\\portable.bouncycastle.1.8.9.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Il pacchetto 'BouncyCastle 1.8.9' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' e non mediante il framework di destinazione del progetto 'net5.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
+      "libraryId": "BouncyCastle",
+      "targetGraphs": [
+        "net5.0-windows7.0"
+      ]
+    }
+  ]
+}

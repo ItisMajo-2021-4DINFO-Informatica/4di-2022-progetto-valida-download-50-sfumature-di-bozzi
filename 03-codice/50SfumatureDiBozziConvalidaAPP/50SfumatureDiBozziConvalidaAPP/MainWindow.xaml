@@ -1,0 +1,126 @@
+﻿<Window x:Class="_50SfumatureDiBozziConvalidaAPP.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:_50SfumatureDiBozziConvalidaAPP"
+        mc:Ignorable="d"
+        Title="Verifica download" Height="608" Width="1074" ResizeMode="NoResize">
+    <StackPanel x:Name="Finestra">
+        <StackPanel.Background>
+            <ImageBrush ImageSource="https://www.hoteldonandres.com/wp-content/uploads/2016/10/blackboard.jpg"/>
+        </StackPanel.Background>
+
+        <Label x:Name="label1" Content="Convalida File" Margin="10" Foreground="White" Style="{StaticResource CustomFont}" FontSize="50" HorizontalAlignment="Center"/>
+        <Grid Height="418">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="884*"/>
+                <ColumnDefinition Width="191*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="235*"/>
+                <RowDefinition Height="183*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="label2" Content="START" Margin="96,33,610,129" FontSize="40" Style="{StaticResource CustomFont}" FontStyle="Oblique"  Foreground="White" />
+            <Button x:Name="btnCercaFile" Content="Importa File" Margin="100,122,642,83" Click="btnCercaFile_Click" Style="{StaticResource btnBlue}"/>
+            <Rectangle x:Name="ciao"
+                Stroke="White" StrokeThickness="4"
+                Margin="40,23,576,54"/>
+            <Line
+                x:Name="linea2"
+                X1="0" Y1="60"
+                X2="990" Y2="60"
+                Stroke="White"
+                StrokeThickness="2" Margin="45,157,0,158" Grid.RowSpan="2" Grid.ColumnSpan="2" />
+            <Button x:Name="btnCalcolaSHA" Content="CheckSum SHA256" Margin="468,122,278,83" Click="btnCalcolaSHA_Click" Style="{StaticResource btnBlue}"/>
+            <Rectangle x:Name="ciao1"
+                Stroke="White" StrokeThickness="4"
+                Margin="402,23,212,54"/>
+            <Line
+                x:Name="linea1"
+                X1="10" Y1="60"
+                X2="150" Y2="60"
+                Stroke="White"
+                StrokeThickness="4" Margin="91,28,-91,154" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <Button x:Name="btnVerifica" Content="Verifica PGP" Margin="833,118,103,87" Click="btnVerifica_Click" Style="{StaticResource btnBlue}" Grid.ColumnSpan="2"/>
+            <Rectangle x:Name="ciao2"
+                Stroke="White" StrokeThickness="4"
+                Margin="768,23,38,54" Grid.ColumnSpan="2"/>
+            <Rectangle
+                Stroke="White" StrokeThickness="4"
+                Margin="45,11,170,-39" Grid.Row="1"/>
+            <Label x:Name="label4" Content="SHA256" Foreground="White" FontSize="40" FontStyle="Oblique" Style="{StaticResource CustomFont}" Margin="451,30,239,132"/>
+            <Line
+                x:Name="linea3"
+                X1="10" Y1="60"
+                X2="150" Y2="60"
+                Stroke="White"
+                StrokeThickness="4" Margin="458,28,-458,154" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <Label x:Name="label3" Content="PGP" Foreground="White" FontSize="40" FontStyle="Oblique" Style="{StaticResource CustomFont}" Margin="848,30,84,132" Grid.ColumnSpan="2"/>
+            <Line
+                x:Name="linea5"
+                X1="10" Y1="60"
+                X2="150" Y2="60"
+                Stroke="White"
+                StrokeThickness="4" Margin="823,28,-823,154" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <Label Content="status:" Foreground="White" FontSize="30" Style="{StaticResource CustomFont}" Margin="833,226,82,119" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+            <Line
+                X1="10" Y1="60"
+                X2="150" Y2="60"
+                Stroke="White"
+                StrokeThickness="4" Margin="823,209,-823,-27" Grid.RowSpan="2" Grid.ColumnSpan="2"/>
+            <Label Content="PGP:" Foreground="Gray" FontSize="30" Style="{StaticResource CustomFont}" Margin="796,177,162,-67" Grid.Row="1" Grid.ColumnSpan="2"/>
+            <Label Content="File:" Foreground="Gray" FontSize="30" Style="{StaticResource CustomFont}" Margin="796,52,147,0" Grid.Row="1" Height="73" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+            <Rectangle
+                Stroke="White" StrokeThickness="4"
+                Margin="62,56,79,86" Grid.Row="1" Grid.Column="1"/>
+            <Image x:Name="foto1" Source="https://i.imgur.com/u9gkm35.png" Margin="58,181,73,-39" Grid.Row="1" Visibility="Hidden" Grid.Column="1"/>
+            <Image x:Name="foto2" Source="https://www.pinclipart.com/picdir/big/421-4218318_red-cross-transparent-background-clipart.png" Margin="61,184,78,-35" Grid.Row="1" Visibility="Hidden" Grid.Column="1"/>
+            <Rectangle
+                Stroke="White" StrokeThickness="4"
+                Margin="62,181,79,-39" Grid.Row="1" Grid.Column="1"/>
+            <Label Content="SHA256:" Foreground="Gray" FontSize="30" Style="{StaticResource CustomFont}" Margin="796,116,147,0" Grid.Row="1" Height="73" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+            <Rectangle
+                Stroke="White" StrokeThickness="4"
+                Margin="62,119,80,24" Grid.Row="1" Grid.Column="1"/>
+            <Image x:Name="foto5" Source="https://i.imgur.com/u9gkm35.png" Margin="57,57,74,87" Grid.Row="1" Visibility="Hidden" Grid.Column="1"/>
+            <Image x:Name="foto6" Source="https://www.pinclipart.com/picdir/big/421-4218318_red-cross-transparent-background-clipart.png" Margin="61,59,78,90" Grid.Row="1" Visibility="Hidden" Grid.Column="1"/>
+            <Image x:Name="foto3" Source="https://i.imgur.com/u9gkm35.png" Margin="57,120,74,24" Grid.Row="1" Visibility="Hidden" Grid.Column="1"/>
+            <Image x:Name="foto4" Source="https://www.pinclipart.com/picdir/big/421-4218318_red-cross-transparent-background-clipart.png" Margin="61,122,78,27" Grid.Row="1" Visibility="Hidden" Grid.Column="1"/>
+            <Button Visibility="Hidden" x:Name="btnMostra" Content="Mostra" Margin="58,27,514,126" Click="btnMostra_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+            <Button Visibility="Hidden" x:Name="btnNascondi" Content="Nascondi" Margin="375,27,182,126" Click="btnNascondi_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+
+            <Label Visibility="Hidden" x:Name="lblx1" Content="1) Installa il seguente programma. -------> " Foreground="White" Margin="58,71,514,84" Grid.Row="1"/>
+            <Button Visibility="Hidden" x:Name="btnCopia" Margin="296,130,548,34" Click="btnCopia_Click" Style="{StaticResource btnBlue}" Grid.Row="1">
+            </Button>
+
+            <Label Visibility="Hidden" x:Name="lblx2" Content="2) Prima di iniziare, digita questa linea. --> " Foreground="White" Margin="58,126,568,29" Grid.Row="1"/>
+            <Button Visibility="Hidden" x:Name="btnLink" Margin="296,75,548,88" Click="btnLink_Click" Style="{StaticResource btnBlue}" Grid.Row="1">
+            </Button>
+
+            <Label Visibility="Hidden" x:Name="lblx4" Content="3) Importa la fingerprint da qui. -------------> " Foreground="White" Margin="375,71,232,84" Grid.Row="1"/>
+            <Button Visibility="Hidden" x:Name="btnCopia2" Content="" Margin="631,75,212,88" Click="btnCopia2_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+
+            <Label Visibility="Hidden" x:Name="lblx5" Content="4) Verifica i file e chiudi la console. ---------->" Foreground="White" Margin="375,125,232,30" Grid.Row="1"/>
+            <Button Visibility="Hidden" x:Name="btnCopia3" Content="" Margin="631,130,212,33" Click="btnCopia3_Click" Style="{StaticResource btnBlue}" Grid.Row="1"/>
+            <Label x:Name="Frame" Margin="0,0,642,212" Foreground="White"/>
+            <Rectangle
+                x:Name="rect1" Visibility="Hidden"
+                Stroke="White" StrokeThickness="4"
+                Margin="40,-3,170,44"/>
+            <TextBlock Visibility="Hidden" x:Name="lblFinale" Foreground="White" TextWrapping="Wrap" FontSize="35" Text="La data inerente alla firma digitale  risale al 05/03/2022 alle ore 07:15:43?" Margin="58,7,268,30"/>
+            <RadioButton Visibility="Hidden" x:Name="rbtnSI" Content="SI" Click="rbtnSI_Click" Margin="620,28,135,110" FontSize="35" Foreground="Gray" />
+            <RadioButton Visibility="Hidden" x:Name="rbtnNO" Content="NO" Click="rbtnNO_Click" Margin="620,115,137,23" FontSize="35" Foreground="Gray" />
+            <Rectangle x:Name="ciao5" Visibility="Hidden"
+                Stroke="White" StrokeThickness="4"
+                Margin="768,0,38,44" Grid.ColumnSpan="2"/>
+            <Line x:Name="Linea" Visibility="Hidden"
+                X1="10" Y1="60"
+                X2="150" Y2="60"
+                Stroke="White"
+                StrokeThickness="4" Margin="823,-3,-823,2" Grid.ColumnSpan="2"/>
+            <TextBlock Visibility="Hidden" x:Name="label6" Text="EXTRA" Margin="838,12,79,151" FontSize="40" FontFamily="Rockwell" FontStyle="Oblique"  Foreground="White" Grid.ColumnSpan="2" />
+            <Button Visibility="Hidden" x:Name="btnExtra" Content="Clicca Qui!" Margin="831,122,101,83" Click="btnExtra_Click" Style="{StaticResource btnBlue}" Grid.ColumnSpan="2"/>
+        </Grid>
+    </StackPanel>
+</Window>
